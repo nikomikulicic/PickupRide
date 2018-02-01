@@ -10,10 +10,14 @@
 		975ED73555ADEFDF9080A629 /* Pods_PickupRideTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 998E9216DC0177AE0F4765B6 /* Pods_PickupRideTests.framework */; };
 		DBC1D3D49EA91E6C02F83F70 /* Pods_PickupRide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFEA95A124EF7FB58454E03 /* Pods_PickupRide.framework */; };
 		F7D1483F202349E0003A4F63 /* NavigationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1483E202349E0003A4F63 /* NavigationService.swift */; };
+		F7D1484220234CF9003A4F63 /* CurrentRideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7D1484120234CF9003A4F63 /* CurrentRideViewController.xib */; };
+		F7D1484520234D20003A4F63 /* CurrentRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1484420234D20003A4F63 /* CurrentRideViewController.swift */; };
+		F7D1484720234DB9003A4F63 /* CurrentRideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1484620234DB9003A4F63 /* CurrentRideViewModel.swift */; };
+		F7D1484A20234F2E003A4F63 /* BundleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1484920234F2E003A4F63 /* BundleImage.swift */; };
+		F7D1484C20235170003A4F63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7D1484B20235170003A4F63 /* Assets.xcassets */; };
+		F7D1484F20235282003A4F63 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1484E20235282003A4F63 /* NavigationController.swift */; };
 		F7E7E3AE2023417200BF0D50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E7E3AD2023417200BF0D50 /* AppDelegate.swift */; };
-		F7E7E3B02023417200BF0D50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E7E3AF2023417200BF0D50 /* ViewController.swift */; };
 		F7E7E3B62023417200BF0D50 /* PickupRide.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F7E7E3B42023417200BF0D50 /* PickupRide.xcdatamodeld */; };
-		F7E7E3B82023417200BF0D50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7E7E3B72023417200BF0D50 /* Assets.xcassets */; };
 		F7E7E3BB2023417200BF0D50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7E7E3B92023417200BF0D50 /* LaunchScreen.storyboard */; };
 		F7E7E3C62023417200BF0D50 /* PickupRideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E7E3C52023417200BF0D50 /* PickupRideTests.swift */; };
 /* End PBXBuildFile section */
@@ -36,11 +40,15 @@
 		998E9216DC0177AE0F4765B6 /* Pods_PickupRideTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PickupRideTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEFEA95A124EF7FB58454E03 /* Pods_PickupRide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PickupRide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D1483E202349E0003A4F63 /* NavigationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationService.swift; sourceTree = "<group>"; };
+		F7D1484120234CF9003A4F63 /* CurrentRideViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentRideViewController.xib; sourceTree = "<group>"; };
+		F7D1484420234D20003A4F63 /* CurrentRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRideViewController.swift; sourceTree = "<group>"; };
+		F7D1484620234DB9003A4F63 /* CurrentRideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRideViewModel.swift; sourceTree = "<group>"; };
+		F7D1484920234F2E003A4F63 /* BundleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleImage.swift; sourceTree = "<group>"; };
+		F7D1484B20235170003A4F63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F7D1484E20235282003A4F63 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		F7E7E3AA2023417200BF0D50 /* PickupRide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickupRide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7E7E3AD2023417200BF0D50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F7E7E3AF2023417200BF0D50 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F7E7E3B52023417200BF0D50 /* PickupRide.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PickupRide.xcdatamodel; sourceTree = "<group>"; };
-		F7E7E3B72023417200BF0D50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7E7E3BA2023417200BF0D50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7E7E3BC2023417200BF0D50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7E7E3C12023417200BF0D50 /* PickupRideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickupRideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,7 +99,7 @@
 		F7D1483C202349AA003A4F63 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F7E7E3B72023417200BF0D50 /* Assets.xcassets */,
+				F7D1484B20235170003A4F63 /* Assets.xcassets */,
 				F7E7E3B92023417200BF0D50 /* LaunchScreen.storyboard */,
 				F7E7E3BC2023417200BF0D50 /* Info.plist */,
 			);
@@ -101,11 +109,39 @@
 		F7D1483D202349B8003A4F63 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
-				F7E7E3AF2023417200BF0D50 /* ViewController.swift */,
+				F7D1484D20235273003A4F63 /* Navigation */,
+				F7D1484820234F20003A4F63 /* Theme */,
+				F7D1484320234D0F003A4F63 /* CurrentRide */,
 				F7E7E3AD2023417200BF0D50 /* AppDelegate.swift */,
-				F7D1483E202349E0003A4F63 /* NavigationService.swift */,
 			);
 			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		F7D1484320234D0F003A4F63 /* CurrentRide */ = {
+			isa = PBXGroup;
+			children = (
+				F7D1484120234CF9003A4F63 /* CurrentRideViewController.xib */,
+				F7D1484420234D20003A4F63 /* CurrentRideViewController.swift */,
+				F7D1484620234DB9003A4F63 /* CurrentRideViewModel.swift */,
+			);
+			path = CurrentRide;
+			sourceTree = "<group>";
+		};
+		F7D1484820234F20003A4F63 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				F7D1484920234F2E003A4F63 /* BundleImage.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		F7D1484D20235273003A4F63 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				F7D1483E202349E0003A4F63 /* NavigationService.swift */,
+				F7D1484E20235282003A4F63 /* NavigationController.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		F7E7E3A12023417200BF0D50 = {
@@ -237,7 +273,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7E7E3BB2023417200BF0D50 /* LaunchScreen.storyboard in Resources */,
-				F7E7E3B82023417200BF0D50 /* Assets.xcassets in Resources */,
+				F7D1484C20235170003A4F63 /* Assets.xcassets in Resources */,
+				F7D1484220234CF9003A4F63 /* CurrentRideViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,9 +401,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7D1484520234D20003A4F63 /* CurrentRideViewController.swift in Sources */,
 				F7E7E3B62023417200BF0D50 /* PickupRide.xcdatamodeld in Sources */,
-				F7E7E3B02023417200BF0D50 /* ViewController.swift in Sources */,
+				F7D1484720234DB9003A4F63 /* CurrentRideViewModel.swift in Sources */,
+				F7D1484A20234F2E003A4F63 /* BundleImage.swift in Sources */,
 				F7E7E3AE2023417200BF0D50 /* AppDelegate.swift in Sources */,
+				F7D1484F20235282003A4F63 /* NavigationController.swift in Sources */,
 				F7D1483F202349E0003A4F63 /* NavigationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

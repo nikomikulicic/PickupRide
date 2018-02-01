@@ -11,18 +11,17 @@ import UIKit
 class NavigationService {
     
     let window: UIWindow
-    let navigationController = UINavigationController()
+    let navigationController = NavigationController()
     
     init(window: UIWindow) {
         self.window = window
     }
     
     func displayInitialViewController() {
-        let viewController = ViewController()
+        let viewController = CurrentRideViewController()
         navigationController.viewControllers = [viewController]
         
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
     }
 }
-
