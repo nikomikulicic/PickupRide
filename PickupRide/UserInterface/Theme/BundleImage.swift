@@ -11,6 +11,10 @@ import UIKit
 enum BundleImage: String {
     
     case profile = "icProfile"
+    
+    static func image(for: RideActionType) -> BundleImage {
+        return profile
+    }
 }
 
 extension UIImage {

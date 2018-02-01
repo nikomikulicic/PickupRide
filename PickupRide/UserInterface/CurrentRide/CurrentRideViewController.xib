@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CurrentRideViewController" customModule="PickupRide" customModuleProvider="target">
             <connections>
+                <outlet property="actionsView" destination="mk8-XC-OxA" id="bgl-NW-t1W"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Syl-Ap-LQ4"/>
             </connections>
         </placeholder>
@@ -19,7 +20,21 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="335" placeholderIntrinsicHeight="60" translatesAutoresizingMaskIntoConstraints="NO" id="mk8-XC-OxA">
+                    <rect key="frame" x="20" y="487" width="335" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="X5D-yW-62v"/>
+                    </constraints>
+                </stackView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mk8-XC-OxA" secondAttribute="trailing" constant="20" id="2Nn-zD-jfo"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="mk8-XC-OxA" secondAttribute="bottom" constant="120" id="7H6-ED-nQi"/>
+                <constraint firstItem="mk8-XC-OxA" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="NjS-Zh-vze"/>
+                <constraint firstItem="mk8-XC-OxA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="n1V-Sq-cy6"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="58" y="50"/>
         </view>

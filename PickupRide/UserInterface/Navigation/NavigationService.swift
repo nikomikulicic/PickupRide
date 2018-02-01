@@ -7,21 +7,33 @@
 //
 
 import UIKit
+import RxSwift
 
 class NavigationService {
     
-    let window: UIWindow
-    let navigationController = NavigationController()
+    private let disposeBag = DisposeBag()
+    private let window: UIWindow
+    private let navigationController = NavigationController()
+    
     
     init(window: UIWindow) {
         self.window = window
     }
     
     func displayInitialViewController() {
-        let viewController = CurrentRideViewController()
-        navigationController.viewControllers = [viewController]
+        let viewModel = CurrentRideViewModel()
+        let viewController = CurrentRideViewController(viewModel: viewModel)
         
+        viewController.profileTapped.asObservable().subscribe(onNext: { [weak self] in
+            self?.pushProfileViewController()
+        }).disposed(by: disposeBag)
+        
+        navigationController.viewControllers = [viewController]
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
+    }
+    
+    func pushProfileViewController() {
+        print("Push profile")
     }
 }
