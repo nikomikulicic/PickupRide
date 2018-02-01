@@ -4,6 +4,7 @@ use_frameworks!
 def all_pods
     pod 'RxSwift', '~> 4.1'
     pod 'RxCocoa', '~> 4.1'
+    pod 'PureLayout'
 end
 
 target 'PickupRide' do
