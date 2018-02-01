@@ -9,6 +9,7 @@
 import UIKit
 import RxCocoa
 import RxSwift
+import PureLayout
 
 class CurrentRideViewController: UIViewController {
     
@@ -60,6 +61,9 @@ class CurrentRideViewController: UIViewController {
     private func createButton(for action: RideAction) -> UIButton {
         let button = UIButton()
         button.setImage(UIImage(from: action.image), for: .normal)
+        button.autoSetDimension(.height, toSize: 60)
+        button.autoMatch(.width, to: .height, of: button)
+        
         return button
     }
     

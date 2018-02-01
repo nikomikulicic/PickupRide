@@ -12,8 +12,25 @@ enum BundleImage: String {
     
     case profile = "icProfile"
     
-    static func image(for: RideActionType) -> BundleImage {
-        return profile
+    case stopOver = "icPause"
+    case startRide = "icCar"
+    case continueRide = "icPlay"
+    case passengers = "icPeople"
+    case endRide = "icCheckmark"
+    
+    static func image(for type: RideActionType) -> BundleImage {
+        switch type {
+        case .stopOver:
+            return .stopOver
+        case .startRide:
+            return .startRide
+        case .continueRide:
+            return .continueRide
+        case .passengerPickedUp:
+            return .passengers
+        case .endRide:
+            return .endRide
+        }
     }
 }
 
