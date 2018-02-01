@@ -1,0 +1,462 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F7E7E3AE2023417200BF0D50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E7E3AD2023417200BF0D50 /* AppDelegate.swift */; };
+		F7E7E3B02023417200BF0D50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E7E3AF2023417200BF0D50 /* ViewController.swift */; };
+		F7E7E3B32023417200BF0D50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7E7E3B12023417200BF0D50 /* Main.storyboard */; };
+		F7E7E3B62023417200BF0D50 /* PickupRide.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F7E7E3B42023417200BF0D50 /* PickupRide.xcdatamodeld */; };
+		F7E7E3B82023417200BF0D50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7E7E3B72023417200BF0D50 /* Assets.xcassets */; };
+		F7E7E3BB2023417200BF0D50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7E7E3B92023417200BF0D50 /* LaunchScreen.storyboard */; };
+		F7E7E3C62023417200BF0D50 /* PickupRideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E7E3C52023417200BF0D50 /* PickupRideTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F7E7E3C22023417200BF0D50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7E7E3A22023417200BF0D50 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7E7E3A92023417200BF0D50;
+			remoteInfo = PickupRide;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F7E7E3AA2023417200BF0D50 /* PickupRide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickupRide.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7E7E3AD2023417200BF0D50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F7E7E3AF2023417200BF0D50 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F7E7E3B22023417200BF0D50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F7E7E3B52023417200BF0D50 /* PickupRide.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PickupRide.xcdatamodel; sourceTree = "<group>"; };
+		F7E7E3B72023417200BF0D50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F7E7E3BA2023417200BF0D50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F7E7E3BC2023417200BF0D50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7E7E3C12023417200BF0D50 /* PickupRideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickupRideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7E7E3C52023417200BF0D50 /* PickupRideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupRideTests.swift; sourceTree = "<group>"; };
+		F7E7E3C72023417200BF0D50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F7E7E3A72023417200BF0D50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7E7E3BE2023417200BF0D50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F7E7E3A12023417200BF0D50 = {
+			isa = PBXGroup;
+			children = (
+				F7E7E3AC2023417200BF0D50 /* PickupRide */,
+				F7E7E3C42023417200BF0D50 /* PickupRideTests */,
+				F7E7E3AB2023417200BF0D50 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F7E7E3AB2023417200BF0D50 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7E7E3AA2023417200BF0D50 /* PickupRide.app */,
+				F7E7E3C12023417200BF0D50 /* PickupRideTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F7E7E3AC2023417200BF0D50 /* PickupRide */ = {
+			isa = PBXGroup;
+			children = (
+				F7E7E3AD2023417200BF0D50 /* AppDelegate.swift */,
+				F7E7E3AF2023417200BF0D50 /* ViewController.swift */,
+				F7E7E3B12023417200BF0D50 /* Main.storyboard */,
+				F7E7E3B72023417200BF0D50 /* Assets.xcassets */,
+				F7E7E3B92023417200BF0D50 /* LaunchScreen.storyboard */,
+				F7E7E3BC2023417200BF0D50 /* Info.plist */,
+				F7E7E3B42023417200BF0D50 /* PickupRide.xcdatamodeld */,
+			);
+			path = PickupRide;
+			sourceTree = "<group>";
+		};
+		F7E7E3C42023417200BF0D50 /* PickupRideTests */ = {
+			isa = PBXGroup;
+			children = (
+				F7E7E3C52023417200BF0D50 /* PickupRideTests.swift */,
+				F7E7E3C72023417200BF0D50 /* Info.plist */,
+			);
+			path = PickupRideTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F7E7E3A92023417200BF0D50 /* PickupRide */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7E7E3CA2023417200BF0D50 /* Build configuration list for PBXNativeTarget "PickupRide" */;
+			buildPhases = (
+				F7E7E3A62023417200BF0D50 /* Sources */,
+				F7E7E3A72023417200BF0D50 /* Frameworks */,
+				F7E7E3A82023417200BF0D50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PickupRide;
+			productName = PickupRide;
+			productReference = F7E7E3AA2023417200BF0D50 /* PickupRide.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F7E7E3C02023417200BF0D50 /* PickupRideTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7E7E3CD2023417200BF0D50 /* Build configuration list for PBXNativeTarget "PickupRideTests" */;
+			buildPhases = (
+				F7E7E3BD2023417200BF0D50 /* Sources */,
+				F7E7E3BE2023417200BF0D50 /* Frameworks */,
+				F7E7E3BF2023417200BF0D50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F7E7E3C32023417200BF0D50 /* PBXTargetDependency */,
+			);
+			name = PickupRideTests;
+			productName = PickupRideTests;
+			productReference = F7E7E3C12023417200BF0D50 /* PickupRideTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F7E7E3A22023417200BF0D50 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Niko Mikulicic";
+				TargetAttributes = {
+					F7E7E3A92023417200BF0D50 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					F7E7E3C02023417200BF0D50 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F7E7E3A92023417200BF0D50;
+					};
+				};
+			};
+			buildConfigurationList = F7E7E3A52023417200BF0D50 /* Build configuration list for PBXProject "PickupRide" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F7E7E3A12023417200BF0D50;
+			productRefGroup = F7E7E3AB2023417200BF0D50 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F7E7E3A92023417200BF0D50 /* PickupRide */,
+				F7E7E3C02023417200BF0D50 /* PickupRideTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F7E7E3A82023417200BF0D50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7E7E3BB2023417200BF0D50 /* LaunchScreen.storyboard in Resources */,
+				F7E7E3B82023417200BF0D50 /* Assets.xcassets in Resources */,
+				F7E7E3B32023417200BF0D50 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7E7E3BF2023417200BF0D50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F7E7E3A62023417200BF0D50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7E7E3B62023417200BF0D50 /* PickupRide.xcdatamodeld in Sources */,
+				F7E7E3B02023417200BF0D50 /* ViewController.swift in Sources */,
+				F7E7E3AE2023417200BF0D50 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7E7E3BD2023417200BF0D50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7E7E3C62023417200BF0D50 /* PickupRideTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F7E7E3C32023417200BF0D50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7E7E3A92023417200BF0D50 /* PickupRide */;
+			targetProxy = F7E7E3C22023417200BF0D50 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F7E7E3B12023417200BF0D50 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7E7E3B22023417200BF0D50 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F7E7E3B92023417200BF0D50 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7E7E3BA2023417200BF0D50 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F7E7E3C82023417200BF0D50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F7E7E3C92023417200BF0D50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F7E7E3CB2023417200BF0D50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PickupRide/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.PickupRide;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F7E7E3CC2023417200BF0D50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PickupRide/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.PickupRide;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F7E7E3CE2023417200BF0D50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PickupRideTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.PickupRideTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PickupRide.app/PickupRide";
+			};
+			name = Debug;
+		};
+		F7E7E3CF2023417200BF0D50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PickupRideTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.PickupRideTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PickupRide.app/PickupRide";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F7E7E3A52023417200BF0D50 /* Build configuration list for PBXProject "PickupRide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7E7E3C82023417200BF0D50 /* Debug */,
+				F7E7E3C92023417200BF0D50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7E7E3CA2023417200BF0D50 /* Build configuration list for PBXNativeTarget "PickupRide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7E7E3CB2023417200BF0D50 /* Debug */,
+				F7E7E3CC2023417200BF0D50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7E7E3CD2023417200BF0D50 /* Build configuration list for PBXNativeTarget "PickupRideTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7E7E3CE2023417200BF0D50 /* Debug */,
+				F7E7E3CF2023417200BF0D50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F7E7E3B42023417200BF0D50 /* PickupRide.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F7E7E3B52023417200BF0D50 /* PickupRide.xcdatamodel */,
+			);
+			currentVersion = F7E7E3B52023417200BF0D50 /* PickupRide.xcdatamodel */;
+			path = PickupRide.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F7E7E3A22023417200BF0D50 /* Project object */;
+}
