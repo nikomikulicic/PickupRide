@@ -1,0 +1,6 @@
+framework module Pods_PickupRide {
+  umbrella header "Pods-PickupRide-umbrella.h"
+
+  export *
+  module * { export * }
+}
