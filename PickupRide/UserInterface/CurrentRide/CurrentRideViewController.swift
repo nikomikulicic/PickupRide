@@ -43,28 +43,26 @@ class CurrentRideViewController: UIViewController {
     
     private func updateActionsView(with actions: [RideAction]) {
         actionsView.arrangedSubviews.forEach { $0.removeFromSuperview() }
-        let actionButtons = actions.map { createButton(for: $0) }
-        actionButtons.forEach { actionsView.addArrangedSubview($0) }
+        let actionViews = actions.map { createActionView(for: $0) }
+        actionViews.forEach { actionsView.addArrangedSubview($0) }
         
-        subscribeToActions(actionButtons)
+        subscribeToActions(actionViews)
     }
     
-    private func subscribeToActions(_ actionButtons: [UIButton]) {
-        actionButtons.enumerated().forEach { (index, button) in
-            button.rx.tap
+    private func subscribeToActions(_ actionViews: [RideActionView]) {
+        actionViews.enumerated().forEach { (index, view) in
+            view.tapped
                 .map { index }
                 .bind(onNext: viewModel.actionTapped)
                 .disposed(by: disposeBag)
         }
     }
     
-    private func createButton(for action: RideAction) -> UIButton {
-        let button = UIButton()
-        button.setImage(UIImage(from: action.image), for: .normal)
-        button.autoSetDimension(.height, toSize: 60)
-        button.autoMatch(.width, to: .height, of: button)
-        
-        return button
+    private func createActionView(for action: RideAction) -> RideActionView {
+        let view = RideActionView()
+        view.setUp(for: action)
+        view.autoSetDimensions(to: CGSize(width: 100, height: 100))
+        return view
     }
     
     private func setUpAppearance() {

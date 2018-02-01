@@ -20,6 +20,7 @@ enum RideActionType {
 struct RideAction {
     let type: RideActionType
     let image: BundleImage
+    let title: String
 }
 
 class CurrentRideViewModel {
@@ -53,6 +54,8 @@ class CurrentRideViewModel {
     }
     
     private func createRideAction(ofType type: RideActionType) -> RideAction {
-        return RideAction(type: type, image: BundleImage.image(for: type))
+        return RideAction(type: type,
+                          image: BundleImage.image(for: type),
+                          title: Texts.actionTitle(for: type))
     }
 }

@@ -16,6 +16,9 @@
 		F7D1484A20234F2E003A4F63 /* BundleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1484920234F2E003A4F63 /* BundleImage.swift */; };
 		F7D1484C20235170003A4F63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7D1484B20235170003A4F63 /* Assets.xcassets */; };
 		F7D1484F20235282003A4F63 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1484E20235282003A4F63 /* NavigationController.swift */; };
+		F7D1485320237E9E003A4F63 /* RideActionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7D1485220237E9E003A4F63 /* RideActionView.xib */; };
+		F7D1485520237EB5003A4F63 /* RideActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1485420237EB5003A4F63 /* RideActionView.swift */; };
+		F7D1485720238547003A4F63 /* Texts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1485620238547003A4F63 /* Texts.swift */; };
 		F7E7E3AE2023417200BF0D50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E7E3AD2023417200BF0D50 /* AppDelegate.swift */; };
 		F7E7E3B62023417200BF0D50 /* PickupRide.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F7E7E3B42023417200BF0D50 /* PickupRide.xcdatamodeld */; };
 		F7E7E3BB2023417200BF0D50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7E7E3B92023417200BF0D50 /* LaunchScreen.storyboard */; };
@@ -46,6 +49,9 @@
 		F7D1484920234F2E003A4F63 /* BundleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleImage.swift; sourceTree = "<group>"; };
 		F7D1484B20235170003A4F63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7D1484E20235282003A4F63 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		F7D1485220237E9E003A4F63 /* RideActionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RideActionView.xib; sourceTree = "<group>"; };
+		F7D1485420237EB5003A4F63 /* RideActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideActionView.swift; sourceTree = "<group>"; };
+		F7D1485620238547003A4F63 /* Texts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texts.swift; sourceTree = "<group>"; };
 		F7E7E3AA2023417200BF0D50 /* PickupRide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickupRide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7E7E3AD2023417200BF0D50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7E7E3B52023417200BF0D50 /* PickupRide.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PickupRide.xcdatamodel; sourceTree = "<group>"; };
@@ -123,6 +129,8 @@
 				F7D1484120234CF9003A4F63 /* CurrentRideViewController.xib */,
 				F7D1484420234D20003A4F63 /* CurrentRideViewController.swift */,
 				F7D1484620234DB9003A4F63 /* CurrentRideViewModel.swift */,
+				F7D1485220237E9E003A4F63 /* RideActionView.xib */,
+				F7D1485420237EB5003A4F63 /* RideActionView.swift */,
 			);
 			path = CurrentRide;
 			sourceTree = "<group>";
@@ -131,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				F7D1484920234F2E003A4F63 /* BundleImage.swift */,
+				F7D1485620238547003A4F63 /* Texts.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -272,6 +281,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7D1485320237E9E003A4F63 /* RideActionView.xib in Resources */,
 				F7E7E3BB2023417200BF0D50 /* LaunchScreen.storyboard in Resources */,
 				F7D1484C20235170003A4F63 /* Assets.xcassets in Resources */,
 				F7D1484220234CF9003A4F63 /* CurrentRideViewController.xib in Resources */,
@@ -408,7 +418,9 @@
 				F7D1484520234D20003A4F63 /* CurrentRideViewController.swift in Sources */,
 				F7E7E3B62023417200BF0D50 /* PickupRide.xcdatamodeld in Sources */,
 				F7D1484720234DB9003A4F63 /* CurrentRideViewModel.swift in Sources */,
+				F7D1485720238547003A4F63 /* Texts.swift in Sources */,
 				F7D1484A20234F2E003A4F63 /* BundleImage.swift in Sources */,
+				F7D1485520237EB5003A4F63 /* RideActionView.swift in Sources */,
 				F7E7E3AE2023417200BF0D50 /* AppDelegate.swift in Sources */,
 				F7D1484F20235282003A4F63 /* NavigationController.swift in Sources */,
 				F7D1483F202349E0003A4F63 /* NavigationService.swift in Sources */,
