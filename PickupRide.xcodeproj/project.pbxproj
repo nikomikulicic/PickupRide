@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		975ED73555ADEFDF9080A629 /* Pods_PickupRideTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 998E9216DC0177AE0F4765B6 /* Pods_PickupRideTests.framework */; };
 		DBC1D3D49EA91E6C02F83F70 /* Pods_PickupRide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFEA95A124EF7FB58454E03 /* Pods_PickupRide.framework */; };
+		F7D1483F202349E0003A4F63 /* NavigationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1483E202349E0003A4F63 /* NavigationService.swift */; };
 		F7E7E3AE2023417200BF0D50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E7E3AD2023417200BF0D50 /* AppDelegate.swift */; };
 		F7E7E3B02023417200BF0D50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E7E3AF2023417200BF0D50 /* ViewController.swift */; };
-		F7E7E3B32023417200BF0D50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7E7E3B12023417200BF0D50 /* Main.storyboard */; };
 		F7E7E3B62023417200BF0D50 /* PickupRide.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F7E7E3B42023417200BF0D50 /* PickupRide.xcdatamodeld */; };
 		F7E7E3B82023417200BF0D50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7E7E3B72023417200BF0D50 /* Assets.xcassets */; };
 		F7E7E3BB2023417200BF0D50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7E7E3B92023417200BF0D50 /* LaunchScreen.storyboard */; };
@@ -35,10 +35,10 @@
 		8AFCD9CABD33C29025C8DF1F /* Pods-PickupRide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickupRide.release.xcconfig"; path = "Pods/Target Support Files/Pods-PickupRide/Pods-PickupRide.release.xcconfig"; sourceTree = "<group>"; };
 		998E9216DC0177AE0F4765B6 /* Pods_PickupRideTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PickupRideTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEFEA95A124EF7FB58454E03 /* Pods_PickupRide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PickupRide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7D1483E202349E0003A4F63 /* NavigationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationService.swift; sourceTree = "<group>"; };
 		F7E7E3AA2023417200BF0D50 /* PickupRide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickupRide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7E7E3AD2023417200BF0D50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7E7E3AF2023417200BF0D50 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F7E7E3B22023417200BF0D50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F7E7E3B52023417200BF0D50 /* PickupRide.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PickupRide.xcdatamodel; sourceTree = "<group>"; };
 		F7E7E3B72023417200BF0D50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7E7E3BA2023417200BF0D50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -88,6 +88,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F7D1483C202349AA003A4F63 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F7E7E3B72023417200BF0D50 /* Assets.xcassets */,
+				F7E7E3B92023417200BF0D50 /* LaunchScreen.storyboard */,
+				F7E7E3BC2023417200BF0D50 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F7D1483D202349B8003A4F63 /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				F7E7E3AF2023417200BF0D50 /* ViewController.swift */,
+				F7E7E3AD2023417200BF0D50 /* AppDelegate.swift */,
+				F7D1483E202349E0003A4F63 /* NavigationService.swift */,
+			);
+			path = UserInterface;
+			sourceTree = "<group>";
+		};
 		F7E7E3A12023417200BF0D50 = {
 			isa = PBXGroup;
 			children = (
@@ -111,12 +131,8 @@
 		F7E7E3AC2023417200BF0D50 /* PickupRide */ = {
 			isa = PBXGroup;
 			children = (
-				F7E7E3AD2023417200BF0D50 /* AppDelegate.swift */,
-				F7E7E3AF2023417200BF0D50 /* ViewController.swift */,
-				F7E7E3B12023417200BF0D50 /* Main.storyboard */,
-				F7E7E3B72023417200BF0D50 /* Assets.xcassets */,
-				F7E7E3B92023417200BF0D50 /* LaunchScreen.storyboard */,
-				F7E7E3BC2023417200BF0D50 /* Info.plist */,
+				F7D1483D202349B8003A4F63 /* UserInterface */,
+				F7D1483C202349AA003A4F63 /* Resources */,
 				F7E7E3B42023417200BF0D50 /* PickupRide.xcdatamodeld */,
 			);
 			path = PickupRide;
@@ -222,7 +238,6 @@
 			files = (
 				F7E7E3BB2023417200BF0D50 /* LaunchScreen.storyboard in Resources */,
 				F7E7E3B82023417200BF0D50 /* Assets.xcassets in Resources */,
-				F7E7E3B32023417200BF0D50 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +367,7 @@
 				F7E7E3B62023417200BF0D50 /* PickupRide.xcdatamodeld in Sources */,
 				F7E7E3B02023417200BF0D50 /* ViewController.swift in Sources */,
 				F7E7E3AE2023417200BF0D50 /* AppDelegate.swift in Sources */,
+				F7D1483F202349E0003A4F63 /* NavigationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,14 +390,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F7E7E3B12023417200BF0D50 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F7E7E3B22023417200BF0D50 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F7E7E3B92023417200BF0D50 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -506,7 +514,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PickupRide/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PickupRide/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.PickupRide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -521,7 +529,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PickupRide/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PickupRide/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.PickupRide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
