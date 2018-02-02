@@ -11,12 +11,13 @@ import UIKit
 enum BundleImage: String {
     
     case profile = "icProfile"
-    
     case stopOver = "icPause"
     case startRide = "icCar"
     case continueRide = "icPlay"
     case passengers = "icPeople"
     case endRide = "icCheckmark"
+    
+    case avatar = "avatar"
     
     static func image(for type: RideActionType) -> BundleImage {
         switch type {

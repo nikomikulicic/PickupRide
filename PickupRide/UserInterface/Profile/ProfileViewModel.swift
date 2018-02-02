@@ -8,6 +8,18 @@
 
 import Foundation
 
+struct UserInfo {
+    let name: String
+    let age: Int
+    let plateNumber: String
+    let profileImage: BundleImage
+}
+
 class ProfileViewModel {
     
+    let userInfo: UserInfo    
+    
+    init(userInfo: UserInfo) {
+        self.userInfo = userInfo
+    }
 }

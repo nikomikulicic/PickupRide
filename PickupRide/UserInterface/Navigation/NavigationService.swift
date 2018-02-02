@@ -14,6 +14,7 @@ class NavigationService {
     private let disposeBag = DisposeBag()
     private let window: UIWindow
     private let navigationController = NavigationController()
+    private let userInfo = UserInfo(name: "Niko Mikuličić", age: 26, plateNumber: "ZG1303HR", profileImage: .avatar)
     
     init(window: UIWindow) {
         self.window = window
@@ -33,7 +34,7 @@ class NavigationService {
     }
     
     func pushProfileViewController() {
-        let viewModel = ProfileViewModel()
+        let viewModel = ProfileViewModel(userInfo: userInfo)
         let viewController = ProfileViewController(viewModel: viewModel)
         navigationController.pushViewController(viewController, animated: true)
     }

@@ -1,13 +1,23 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="PickupRide" customModuleProvider="target">
             <connections>
+                <outlet property="ageLabel" destination="AkZ-5W-VbD" id="lt6-xM-1FY"/>
+                <outlet property="nameLabel" destination="9bN-N2-cXF" id="fBQ-Ue-A31"/>
+                <outlet property="optionsTableView" destination="uIu-5c-V8p" id="xh3-iK-eLk"/>
+                <outlet property="plateNumberLabel" destination="fL6-4m-ecl" id="KN9-d4-z6W"/>
+                <outlet property="profileImageView" destination="l11-JW-ZcI" id="Fax-Da-ORZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,8 +25,57 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l11-JW-ZcI">
+                    <rect key="frame" x="16" y="36" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="l11-JW-ZcI" secondAttribute="height" multiplier="1:1" id="Oy7-DM-7Hc"/>
+                        <constraint firstAttribute="width" constant="80" id="jPr-3x-ocE"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="G2q-zR-6nx">
+                    <rect key="frame" x="112" y="46" width="238" height="70"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name and surname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bN-N2-cXF">
+                            <rect key="frame" x="0.0" y="0.0" width="149" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age: 42" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AkZ-5W-VbD">
+                            <rect key="frame" x="0.0" y="25" width="59.5" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLATENUMBER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fL6-4m-ecl">
+                            <rect key="frame" x="0.0" y="49.5" width="120" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uIu-5c-V8p">
+                    <rect key="frame" x="0.0" y="216" width="375" height="451"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="G2q-zR-6nx" firstAttribute="leading" secondItem="l11-JW-ZcI" secondAttribute="trailing" constant="16" id="67D-0c-djS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uIu-5c-V8p" secondAttribute="trailing" id="GMR-q0-HVz"/>
+                <constraint firstItem="l11-JW-ZcI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="So7-BZ-0Wd"/>
+                <constraint firstItem="G2q-zR-6nx" firstAttribute="top" secondItem="l11-JW-ZcI" secondAttribute="top" constant="10" id="l9Y-ju-EhF"/>
+                <constraint firstItem="l11-JW-ZcI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="moa-Kf-ZNt"/>
+                <constraint firstItem="G2q-zR-6nx" firstAttribute="bottom" secondItem="l11-JW-ZcI" secondAttribute="bottom" id="pgv-aQ-rWM"/>
+                <constraint firstItem="uIu-5c-V8p" firstAttribute="top" secondItem="l11-JW-ZcI" secondAttribute="bottom" constant="100" id="qHC-kP-1cl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="uIu-5c-V8p" secondAttribute="bottom" id="u1a-hI-wvb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="G2q-zR-6nx" secondAttribute="trailing" constant="25" id="xx7-ty-kMf"/>
+                <constraint firstItem="uIu-5c-V8p" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="yCQ-h8-J3g"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
         </view>
     </objects>
 </document>
