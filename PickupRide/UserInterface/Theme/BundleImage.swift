@@ -11,6 +11,9 @@ import UIKit
 enum BundleImage: String {
     
     case profile = "icProfile"
+    case pin = "icPin"
+    case list = "icList"
+    
     case stopOver = "icPause"
     case startRide = "icCar"
     case continueRide = "icPlay"

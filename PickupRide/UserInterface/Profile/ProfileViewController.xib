@@ -27,14 +27,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l11-JW-ZcI">
-                    <rect key="frame" x="16" y="36" width="80" height="80"/>
+                    <rect key="frame" x="16" y="70" width="80" height="80"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="l11-JW-ZcI" secondAttribute="height" multiplier="1:1" id="Oy7-DM-7Hc"/>
                         <constraint firstAttribute="width" constant="80" id="jPr-3x-ocE"/>
                     </constraints>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="G2q-zR-6nx">
-                    <rect key="frame" x="112" y="46" width="238" height="70"/>
+                    <rect key="frame" x="112" y="80" width="238" height="70"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name and surname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bN-N2-cXF">
                             <rect key="frame" x="0.0" y="0.0" width="149" height="20.5"/>
@@ -56,8 +56,8 @@
                         </label>
                     </subviews>
                 </stackView>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uIu-5c-V8p">
-                    <rect key="frame" x="0.0" y="216" width="375" height="451"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uIu-5c-V8p">
+                    <rect key="frame" x="0.0" y="250" width="375" height="417"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
@@ -67,7 +67,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uIu-5c-V8p" secondAttribute="trailing" id="GMR-q0-HVz"/>
                 <constraint firstItem="l11-JW-ZcI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="So7-BZ-0Wd"/>
                 <constraint firstItem="G2q-zR-6nx" firstAttribute="top" secondItem="l11-JW-ZcI" secondAttribute="top" constant="10" id="l9Y-ju-EhF"/>
-                <constraint firstItem="l11-JW-ZcI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="moa-Kf-ZNt"/>
+                <constraint firstItem="l11-JW-ZcI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="moa-Kf-ZNt"/>
                 <constraint firstItem="G2q-zR-6nx" firstAttribute="bottom" secondItem="l11-JW-ZcI" secondAttribute="bottom" id="pgv-aQ-rWM"/>
                 <constraint firstItem="uIu-5c-V8p" firstAttribute="top" secondItem="l11-JW-ZcI" secondAttribute="bottom" constant="100" id="qHC-kP-1cl"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="uIu-5c-V8p" secondAttribute="bottom" id="u1a-hI-wvb"/>

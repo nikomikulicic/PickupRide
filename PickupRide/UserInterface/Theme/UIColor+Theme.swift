@@ -11,6 +11,6 @@ import UIKit
 extension UIColor {
     
     class var prBackgroundGray: UIColor {
-        return UIColor(white: 240 / 255.0, alpha: 1)
+        return UIColor(white: 245 / 255.0, alpha: 1)
     }
 }
