@@ -9,15 +9,7 @@
 import Foundation
 import RxSwift
 
-enum RideActionType {
-    case startRide
-    case passengerPickedUp
-    case stopOver
-    case continueRide
-    case endRide
-}
-
-struct RideAction {
+struct RideActionData {
     let type: RideActionType
     let image: BundleImage
     let title: String
@@ -25,7 +17,7 @@ struct RideAction {
 
 class CurrentRideViewModel {
     
-    let actions = Variable<[RideAction]>([])
+    let actions = Variable<[RideActionData]>([])
 
     init() {
         let initialAction = createRideAction(ofType: .startRide)
@@ -53,9 +45,9 @@ class CurrentRideViewModel {
         }
     }
     
-    private func createRideAction(ofType type: RideActionType) -> RideAction {
-        return RideAction(type: type,
-                          image: BundleImage.image(for: type),
-                          title: Texts.actionTitle(for: type))
+    private func createRideAction(ofType type: RideActionType) -> RideActionData {
+        return RideActionData(type: type,
+                              image: BundleImage.image(for: type),
+                              title: Texts.actionTitle(for: type))
     }
 }

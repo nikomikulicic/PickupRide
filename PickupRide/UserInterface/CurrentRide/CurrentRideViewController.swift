@@ -41,7 +41,7 @@ class CurrentRideViewController: UIViewController {
         }).disposed(by: disposeBag)
     }
     
-    private func updateActionsView(with actions: [RideAction]) {
+    private func updateActionsView(with actions: [RideActionData]) {
         actionsView.arrangedSubviews.forEach { $0.removeFromSuperview() }
         let actionViews = actions.map { createActionView(for: $0) }
         actionViews.forEach { actionsView.addArrangedSubview($0) }
@@ -58,7 +58,7 @@ class CurrentRideViewController: UIViewController {
         }
     }
     
-    private func createActionView(for action: RideAction) -> RideActionView {
+    private func createActionView(for action: RideActionData) -> RideActionView {
         let view = RideActionView()
         view.setUp(for: action)
         view.autoSetDimensions(to: CGSize(width: 100, height: 100))

@@ -15,6 +15,10 @@
 		F7201A3220244FD3002A13DE /* UIColor+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7201A3120244FD3002A13DE /* UIColor+Theme.swift */; };
 		F7201A3620245EB9002A13DE /* ProfileOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7201A3420245EB9002A13DE /* ProfileOptionCell.swift */; };
 		F7201A3720245EB9002A13DE /* ProfileOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7201A3520245EB9002A13DE /* ProfileOptionCell.xib */; };
+		F7201A3A20246B4E002A13DE /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7201A3920246B4E002A13DE /* Booking.swift */; };
+		F7201A3C2024754F002A13DE /* RideAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7201A3B2024754F002A13DE /* RideAction.swift */; };
+		F7201A3F2024757C002A13DE /* GPSData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7201A3E2024757C002A13DE /* GPSData.swift */; };
+		F7201A41202476C7002A13DE /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7201A40202476C7002A13DE /* Location.swift */; };
 		F7D1483F202349E0003A4F63 /* NavigationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1483E202349E0003A4F63 /* NavigationService.swift */; };
 		F7D1484220234CF9003A4F63 /* CurrentRideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7D1484120234CF9003A4F63 /* CurrentRideViewController.xib */; };
 		F7D1484520234D20003A4F63 /* CurrentRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1484420234D20003A4F63 /* CurrentRideViewController.swift */; };
@@ -54,6 +58,10 @@
 		F7201A3120244FD3002A13DE /* UIColor+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Theme.swift"; sourceTree = "<group>"; };
 		F7201A3420245EB9002A13DE /* ProfileOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOptionCell.swift; sourceTree = "<group>"; };
 		F7201A3520245EB9002A13DE /* ProfileOptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileOptionCell.xib; sourceTree = "<group>"; };
+		F7201A3920246B4E002A13DE /* Booking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
+		F7201A3B2024754F002A13DE /* RideAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideAction.swift; sourceTree = "<group>"; };
+		F7201A3E2024757C002A13DE /* GPSData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSData.swift; sourceTree = "<group>"; };
+		F7201A40202476C7002A13DE /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		F7D1483E202349E0003A4F63 /* NavigationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationService.swift; sourceTree = "<group>"; };
 		F7D1484120234CF9003A4F63 /* CurrentRideViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentRideViewController.xib; sourceTree = "<group>"; };
 		F7D1484420234D20003A4F63 /* CurrentRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRideViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +132,27 @@
 				F7201A3420245EB9002A13DE /* ProfileOptionCell.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		F7201A3820246B1E002A13DE /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				F7201A3D20247572002A13DE /* Models */,
+				F7E7E3B42023417200BF0D50 /* PickupRide.xcdatamodeld */,
+			);
+			name = Store;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F7201A3D20247572002A13DE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F7201A3920246B4E002A13DE /* Booking.swift */,
+				F7201A3B2024754F002A13DE /* RideAction.swift */,
+				F7201A3E2024757C002A13DE /* GPSData.swift */,
+				F7201A40202476C7002A13DE /* Location.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		F7D1483C202349AA003A4F63 /* Resources */ = {
@@ -202,9 +231,9 @@
 		F7E7E3AC2023417200BF0D50 /* PickupRide */ = {
 			isa = PBXGroup;
 			children = (
+				F7201A3820246B1E002A13DE /* Store */,
 				F7D1483D202349B8003A4F63 /* UserInterface */,
 				F7D1483C202349AA003A4F63 /* Resources */,
-				F7E7E3B42023417200BF0D50 /* PickupRide.xcdatamodeld */,
 			);
 			path = PickupRide;
 			sourceTree = "<group>";
@@ -448,11 +477,15 @@
 				F7201A2D20244DE1002A13DE /* ProfileViewController.swift in Sources */,
 				F7D1484720234DB9003A4F63 /* CurrentRideViewModel.swift in Sources */,
 				F7D1485720238547003A4F63 /* Texts.swift in Sources */,
+				F7201A41202476C7002A13DE /* Location.swift in Sources */,
 				F7D1484A20234F2E003A4F63 /* BundleImage.swift in Sources */,
 				F7D1485520237EB5003A4F63 /* RideActionView.swift in Sources */,
 				F7201A3020244DEF002A13DE /* ProfileViewModel.swift in Sources */,
 				F7E7E3AE2023417200BF0D50 /* AppDelegate.swift in Sources */,
+				F7201A3C2024754F002A13DE /* RideAction.swift in Sources */,
+				F7201A3A20246B4E002A13DE /* Booking.swift in Sources */,
 				F7201A3620245EB9002A13DE /* ProfileOptionCell.swift in Sources */,
+				F7201A3F2024757C002A13DE /* GPSData.swift in Sources */,
 				F7201A3220244FD3002A13DE /* UIColor+Theme.swift in Sources */,
 				F7D1484F20235282003A4F63 /* NavigationController.swift in Sources */,
 				F7D1483F202349E0003A4F63 /* NavigationService.swift in Sources */,
