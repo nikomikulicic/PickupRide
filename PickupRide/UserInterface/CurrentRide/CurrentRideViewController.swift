@@ -66,8 +66,9 @@ class CurrentRideViewController: UIViewController {
     }
     
     private func setUpAppearance() {
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor.prBackgroundGray
         title = "Current ride"
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
         profileButton = UIBarButtonItem()
         profileButton.image = UIImage(from: .profile)

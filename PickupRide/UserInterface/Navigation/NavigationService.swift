@@ -15,7 +15,6 @@ class NavigationService {
     private let window: UIWindow
     private let navigationController = NavigationController()
     
-    
     init(window: UIWindow) {
         self.window = window
     }
@@ -34,6 +33,8 @@ class NavigationService {
     }
     
     func pushProfileViewController() {
-        print("Push profile")
+        let viewModel = ProfileViewModel()
+        let viewController = ProfileViewController(viewModel: viewModel)
+        navigationController.pushViewController(viewController, animated: true)
     }
 }

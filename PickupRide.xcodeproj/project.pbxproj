@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		975ED73555ADEFDF9080A629 /* Pods_PickupRideTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 998E9216DC0177AE0F4765B6 /* Pods_PickupRideTests.framework */; };
 		DBC1D3D49EA91E6C02F83F70 /* Pods_PickupRide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFEA95A124EF7FB58454E03 /* Pods_PickupRide.framework */; };
+		F7201A2D20244DE1002A13DE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7201A2B20244DE1002A13DE /* ProfileViewController.swift */; };
+		F7201A2E20244DE1002A13DE /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7201A2C20244DE1002A13DE /* ProfileViewController.xib */; };
+		F7201A3020244DEF002A13DE /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7201A2F20244DEF002A13DE /* ProfileViewModel.swift */; };
+		F7201A3220244FD3002A13DE /* UIColor+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7201A3120244FD3002A13DE /* UIColor+Theme.swift */; };
 		F7D1483F202349E0003A4F63 /* NavigationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1483E202349E0003A4F63 /* NavigationService.swift */; };
 		F7D1484220234CF9003A4F63 /* CurrentRideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7D1484120234CF9003A4F63 /* CurrentRideViewController.xib */; };
 		F7D1484520234D20003A4F63 /* CurrentRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1484420234D20003A4F63 /* CurrentRideViewController.swift */; };
@@ -42,6 +46,10 @@
 		8AFCD9CABD33C29025C8DF1F /* Pods-PickupRide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickupRide.release.xcconfig"; path = "Pods/Target Support Files/Pods-PickupRide/Pods-PickupRide.release.xcconfig"; sourceTree = "<group>"; };
 		998E9216DC0177AE0F4765B6 /* Pods_PickupRideTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PickupRideTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEFEA95A124EF7FB58454E03 /* Pods_PickupRide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PickupRide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7201A2B20244DE1002A13DE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F7201A2C20244DE1002A13DE /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		F7201A2F20244DEF002A13DE /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		F7201A3120244FD3002A13DE /* UIColor+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Theme.swift"; sourceTree = "<group>"; };
 		F7D1483E202349E0003A4F63 /* NavigationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationService.swift; sourceTree = "<group>"; };
 		F7D1484120234CF9003A4F63 /* CurrentRideViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentRideViewController.xib; sourceTree = "<group>"; };
 		F7D1484420234D20003A4F63 /* CurrentRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRideViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +110,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F7201A2A20244DB2002A13DE /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F7201A2C20244DE1002A13DE /* ProfileViewController.xib */,
+				F7201A2B20244DE1002A13DE /* ProfileViewController.swift */,
+				F7201A2F20244DEF002A13DE /* ProfileViewModel.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		F7D1483C202349AA003A4F63 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,9 +133,10 @@
 		F7D1483D202349B8003A4F63 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
-				F7D1484D20235273003A4F63 /* Navigation */,
-				F7D1484820234F20003A4F63 /* Theme */,
 				F7D1484320234D0F003A4F63 /* CurrentRide */,
+				F7D1484D20235273003A4F63 /* Navigation */,
+				F7201A2A20244DB2002A13DE /* Profile */,
+				F7D1484820234F20003A4F63 /* Theme */,
 				F7E7E3AD2023417200BF0D50 /* AppDelegate.swift */,
 			);
 			path = UserInterface;
@@ -140,6 +159,7 @@
 			children = (
 				F7D1484920234F2E003A4F63 /* BundleImage.swift */,
 				F7D1485620238547003A4F63 /* Texts.swift */,
+				F7201A3120244FD3002A13DE /* UIColor+Theme.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -284,6 +304,7 @@
 				F7D1485320237E9E003A4F63 /* RideActionView.xib in Resources */,
 				F7E7E3BB2023417200BF0D50 /* LaunchScreen.storyboard in Resources */,
 				F7D1484C20235170003A4F63 /* Assets.xcassets in Resources */,
+				F7201A2E20244DE1002A13DE /* ProfileViewController.xib in Resources */,
 				F7D1484220234CF9003A4F63 /* CurrentRideViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,11 +438,14 @@
 			files = (
 				F7D1484520234D20003A4F63 /* CurrentRideViewController.swift in Sources */,
 				F7E7E3B62023417200BF0D50 /* PickupRide.xcdatamodeld in Sources */,
+				F7201A2D20244DE1002A13DE /* ProfileViewController.swift in Sources */,
 				F7D1484720234DB9003A4F63 /* CurrentRideViewModel.swift in Sources */,
 				F7D1485720238547003A4F63 /* Texts.swift in Sources */,
 				F7D1484A20234F2E003A4F63 /* BundleImage.swift in Sources */,
 				F7D1485520237EB5003A4F63 /* RideActionView.swift in Sources */,
+				F7201A3020244DEF002A13DE /* ProfileViewModel.swift in Sources */,
 				F7E7E3AE2023417200BF0D50 /* AppDelegate.swift in Sources */,
+				F7201A3220244FD3002A13DE /* UIColor+Theme.swift in Sources */,
 				F7D1484F20235282003A4F63 /* NavigationController.swift in Sources */,
 				F7D1483F202349E0003A4F63 /* NavigationService.swift in Sources */,
 			);
