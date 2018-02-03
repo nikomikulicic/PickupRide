@@ -8,16 +8,30 @@
 
 import UIKit
 import RxSwift
+import CoreData
 
 class NavigationService {
     
     private let disposeBag = DisposeBag()
     private let window: UIWindow
     private let navigationController = NavigationController()
+    
     private let userInfo = UserInfo(name: "Niko Mikuličić", age: 26, plateNumber: "ZG1303HR", profileImage: .avatar)
+    private let fileSystem = FileSystem(fileManager: FileManager.default)
+    private let bundle = Bundle.main
+    private let store: Store
     
     init(window: UIWindow) {
         self.window = window
+        
+        guard let _ = try? fileSystem.createApplicationSupportDirectoryIfMissing() else {
+            fatalError("Could not create application support directory")
+        }
+        guard let coreDataStack = try? CoreDataStack(bundle: bundle, storeURL: fileSystem.storeURL, storeType: NSSQLiteStoreType) else {
+            fatalError("Could not create core data stack")
+        }
+        
+        store = Store(stack: coreDataStack)
     }
     
     func displayInitialViewController() {

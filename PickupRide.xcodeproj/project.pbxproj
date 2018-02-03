@@ -15,10 +15,6 @@
 		F7201A3220244FD3002A13DE /* UIColor+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7201A3120244FD3002A13DE /* UIColor+Theme.swift */; };
 		F7201A3620245EB9002A13DE /* ProfileOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7201A3420245EB9002A13DE /* ProfileOptionCell.swift */; };
 		F7201A3720245EB9002A13DE /* ProfileOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7201A3520245EB9002A13DE /* ProfileOptionCell.xib */; };
-		F7201A3A20246B4E002A13DE /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7201A3920246B4E002A13DE /* Booking.swift */; };
-		F7201A3C2024754F002A13DE /* RideAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7201A3B2024754F002A13DE /* RideAction.swift */; };
-		F7201A3F2024757C002A13DE /* GPSData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7201A3E2024757C002A13DE /* GPSData.swift */; };
-		F7201A41202476C7002A13DE /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7201A40202476C7002A13DE /* Location.swift */; };
 		F7D1483F202349E0003A4F63 /* NavigationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1483E202349E0003A4F63 /* NavigationService.swift */; };
 		F7D1484220234CF9003A4F63 /* CurrentRideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7D1484120234CF9003A4F63 /* CurrentRideViewController.xib */; };
 		F7D1484520234D20003A4F63 /* CurrentRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1484420234D20003A4F63 /* CurrentRideViewController.swift */; };
@@ -30,9 +26,16 @@
 		F7D1485520237EB5003A4F63 /* RideActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1485420237EB5003A4F63 /* RideActionView.swift */; };
 		F7D1485720238547003A4F63 /* Texts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1485620238547003A4F63 /* Texts.swift */; };
 		F7E7E3AE2023417200BF0D50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E7E3AD2023417200BF0D50 /* AppDelegate.swift */; };
-		F7E7E3B62023417200BF0D50 /* PickupRide.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F7E7E3B42023417200BF0D50 /* PickupRide.xcdatamodeld */; };
 		F7E7E3BB2023417200BF0D50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7E7E3B92023417200BF0D50 /* LaunchScreen.storyboard */; };
 		F7E7E3C62023417200BF0D50 /* PickupRideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E7E3C52023417200BF0D50 /* PickupRideTests.swift */; };
+		F7F8E9D72025B7BA0064B2C7 /* FileSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F8E9D62025B7BA0064B2C7 /* FileSystem.swift */; };
+		F7F8E9E32025BE1B0064B2C7 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F8E9DA2025BE1A0064B2C7 /* CoreDataStack.swift */; };
+		F7F8E9E42025BE1B0064B2C7 /* PickupRide.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F7F8E9DB2025BE1B0064B2C7 /* PickupRide.xcdatamodeld */; };
+		F7F8E9E52025BE1B0064B2C7 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F8E9DD2025BE1B0064B2C7 /* Store.swift */; };
+		F7F8E9E62025BE1B0064B2C7 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F8E9DF2025BE1B0064B2C7 /* Location.swift */; };
+		F7F8E9E72025BE1B0064B2C7 /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F8E9E02025BE1B0064B2C7 /* Booking.swift */; };
+		F7F8E9E82025BE1B0064B2C7 /* RideAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F8E9E12025BE1B0064B2C7 /* RideAction.swift */; };
+		F7F8E9E92025BE1B0064B2C7 /* GPSData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F8E9E22025BE1B0064B2C7 /* GPSData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,10 +61,6 @@
 		F7201A3120244FD3002A13DE /* UIColor+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Theme.swift"; sourceTree = "<group>"; };
 		F7201A3420245EB9002A13DE /* ProfileOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOptionCell.swift; sourceTree = "<group>"; };
 		F7201A3520245EB9002A13DE /* ProfileOptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileOptionCell.xib; sourceTree = "<group>"; };
-		F7201A3920246B4E002A13DE /* Booking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
-		F7201A3B2024754F002A13DE /* RideAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideAction.swift; sourceTree = "<group>"; };
-		F7201A3E2024757C002A13DE /* GPSData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSData.swift; sourceTree = "<group>"; };
-		F7201A40202476C7002A13DE /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		F7D1483E202349E0003A4F63 /* NavigationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationService.swift; sourceTree = "<group>"; };
 		F7D1484120234CF9003A4F63 /* CurrentRideViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentRideViewController.xib; sourceTree = "<group>"; };
 		F7D1484420234D20003A4F63 /* CurrentRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRideViewController.swift; sourceTree = "<group>"; };
@@ -74,12 +73,19 @@
 		F7D1485620238547003A4F63 /* Texts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texts.swift; sourceTree = "<group>"; };
 		F7E7E3AA2023417200BF0D50 /* PickupRide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickupRide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7E7E3AD2023417200BF0D50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F7E7E3B52023417200BF0D50 /* PickupRide.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PickupRide.xcdatamodel; sourceTree = "<group>"; };
 		F7E7E3BA2023417200BF0D50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7E7E3BC2023417200BF0D50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7E7E3C12023417200BF0D50 /* PickupRideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickupRideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7E7E3C52023417200BF0D50 /* PickupRideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupRideTests.swift; sourceTree = "<group>"; };
 		F7E7E3C72023417200BF0D50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7F8E9D62025B7BA0064B2C7 /* FileSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSystem.swift; sourceTree = "<group>"; };
+		F7F8E9DA2025BE1A0064B2C7 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataStack.swift; path = PickupRide/Store/CoreDataStack.swift; sourceTree = SOURCE_ROOT; };
+		F7F8E9DC2025BE1B0064B2C7 /* PickupRide.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PickupRide.xcdatamodel; sourceTree = "<group>"; };
+		F7F8E9DD2025BE1B0064B2C7 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Store.swift; path = PickupRide/Store/Store.swift; sourceTree = SOURCE_ROOT; };
+		F7F8E9DF2025BE1B0064B2C7 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		F7F8E9E02025BE1B0064B2C7 /* Booking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
+		F7F8E9E12025BE1B0064B2C7 /* RideAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RideAction.swift; sourceTree = "<group>"; };
+		F7F8E9E22025BE1B0064B2C7 /* GPSData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPSData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,22 +143,13 @@
 		F7201A3820246B1E002A13DE /* Store */ = {
 			isa = PBXGroup;
 			children = (
-				F7201A3D20247572002A13DE /* Models */,
-				F7E7E3B42023417200BF0D50 /* PickupRide.xcdatamodeld */,
+				F7F8E9DE2025BE1B0064B2C7 /* Models */,
+				F7F8E9DB2025BE1B0064B2C7 /* PickupRide.xcdatamodeld */,
+				F7F8E9DA2025BE1A0064B2C7 /* CoreDataStack.swift */,
+				F7F8E9DD2025BE1B0064B2C7 /* Store.swift */,
 			);
 			name = Store;
 			path = Model;
-			sourceTree = "<group>";
-		};
-		F7201A3D20247572002A13DE /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				F7201A3920246B4E002A13DE /* Booking.swift */,
-				F7201A3B2024754F002A13DE /* RideAction.swift */,
-				F7201A3E2024757C002A13DE /* GPSData.swift */,
-				F7201A40202476C7002A13DE /* Location.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		F7D1483C202349AA003A4F63 /* Resources */ = {
@@ -231,6 +228,7 @@
 		F7E7E3AC2023417200BF0D50 /* PickupRide */ = {
 			isa = PBXGroup;
 			children = (
+				F7F8E9D52025B7B20064B2C7 /* Controllers */,
 				F7201A3820246B1E002A13DE /* Store */,
 				F7D1483D202349B8003A4F63 /* UserInterface */,
 				F7D1483C202349AA003A4F63 /* Resources */,
@@ -246,6 +244,26 @@
 			);
 			path = PickupRideTests;
 			sourceTree = "<group>";
+		};
+		F7F8E9D52025B7B20064B2C7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F7F8E9D62025B7BA0064B2C7 /* FileSystem.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F7F8E9DE2025BE1B0064B2C7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F7F8E9DF2025BE1B0064B2C7 /* Location.swift */,
+				F7F8E9E02025BE1B0064B2C7 /* Booking.swift */,
+				F7F8E9E12025BE1B0064B2C7 /* RideAction.swift */,
+				F7F8E9E22025BE1B0064B2C7 /* GPSData.swift */,
+			);
+			name = Models;
+			path = PickupRide/Store/Models;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -472,20 +490,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7F8E9E32025BE1B0064B2C7 /* CoreDataStack.swift in Sources */,
 				F7D1484520234D20003A4F63 /* CurrentRideViewController.swift in Sources */,
-				F7E7E3B62023417200BF0D50 /* PickupRide.xcdatamodeld in Sources */,
 				F7201A2D20244DE1002A13DE /* ProfileViewController.swift in Sources */,
+				F7F8E9E52025BE1B0064B2C7 /* Store.swift in Sources */,
+				F7F8E9D72025B7BA0064B2C7 /* FileSystem.swift in Sources */,
 				F7D1484720234DB9003A4F63 /* CurrentRideViewModel.swift in Sources */,
 				F7D1485720238547003A4F63 /* Texts.swift in Sources */,
-				F7201A41202476C7002A13DE /* Location.swift in Sources */,
+				F7F8E9E92025BE1B0064B2C7 /* GPSData.swift in Sources */,
+				F7F8E9E62025BE1B0064B2C7 /* Location.swift in Sources */,
 				F7D1484A20234F2E003A4F63 /* BundleImage.swift in Sources */,
 				F7D1485520237EB5003A4F63 /* RideActionView.swift in Sources */,
+				F7F8E9E82025BE1B0064B2C7 /* RideAction.swift in Sources */,
+				F7F8E9E42025BE1B0064B2C7 /* PickupRide.xcdatamodeld in Sources */,
 				F7201A3020244DEF002A13DE /* ProfileViewModel.swift in Sources */,
 				F7E7E3AE2023417200BF0D50 /* AppDelegate.swift in Sources */,
-				F7201A3C2024754F002A13DE /* RideAction.swift in Sources */,
-				F7201A3A20246B4E002A13DE /* Booking.swift in Sources */,
 				F7201A3620245EB9002A13DE /* ProfileOptionCell.swift in Sources */,
-				F7201A3F2024757C002A13DE /* GPSData.swift in Sources */,
+				F7F8E9E72025BE1B0064B2C7 /* Booking.swift in Sources */,
 				F7201A3220244FD3002A13DE /* UIColor+Theme.swift in Sources */,
 				F7D1484F20235282003A4F63 /* NavigationController.swift in Sources */,
 				F7D1483F202349E0003A4F63 /* NavigationService.swift in Sources */,
@@ -726,12 +747,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		F7E7E3B42023417200BF0D50 /* PickupRide.xcdatamodeld */ = {
+		F7F8E9DB2025BE1B0064B2C7 /* PickupRide.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				F7E7E3B52023417200BF0D50 /* PickupRide.xcdatamodel */,
+				F7F8E9DC2025BE1B0064B2C7 /* PickupRide.xcdatamodel */,
 			);
-			currentVersion = F7E7E3B52023417200BF0D50 /* PickupRide.xcdatamodel */;
+			currentVersion = F7F8E9DC2025BE1B0064B2C7 /* PickupRide.xcdatamodel */;
 			path = PickupRide.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
