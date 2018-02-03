@@ -36,6 +36,8 @@
 		F7F8E9E72025BE1B0064B2C7 /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F8E9E02025BE1B0064B2C7 /* Booking.swift */; };
 		F7F8E9E82025BE1B0064B2C7 /* RideAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F8E9E12025BE1B0064B2C7 /* RideAction.swift */; };
 		F7F8E9E92025BE1B0064B2C7 /* GPSData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F8E9E22025BE1B0064B2C7 /* GPSData.swift */; };
+		F7F8E9EB2025C3A20064B2C7 /* Managed.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F8E9EA2025C3A20064B2C7 /* Managed.swift */; };
+		F7F8E9EE2025C9A30064B2C7 /* NSManagedObjectContext+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F8E9ED2025C9A30064B2C7 /* NSManagedObjectContext+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,8 @@
 		F7F8E9E02025BE1B0064B2C7 /* Booking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
 		F7F8E9E12025BE1B0064B2C7 /* RideAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RideAction.swift; sourceTree = "<group>"; };
 		F7F8E9E22025BE1B0064B2C7 /* GPSData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPSData.swift; sourceTree = "<group>"; };
+		F7F8E9EA2025C3A20064B2C7 /* Managed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Managed.swift; sourceTree = "<group>"; };
+		F7F8E9ED2025C9A30064B2C7 /* NSManagedObjectContext+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,7 @@
 		F7201A3820246B1E002A13DE /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				F7F8E9EC2025C8DF0064B2C7 /* Managed */,
 				F7F8E9DE2025BE1B0064B2C7 /* Models */,
 				F7F8E9DB2025BE1B0064B2C7 /* PickupRide.xcdatamodeld */,
 				F7F8E9DA2025BE1A0064B2C7 /* CoreDataStack.swift */,
@@ -264,6 +269,15 @@
 			name = Models;
 			path = PickupRide/Store/Models;
 			sourceTree = SOURCE_ROOT;
+		};
+		F7F8E9EC2025C8DF0064B2C7 /* Managed */ = {
+			isa = PBXGroup;
+			children = (
+				F7F8E9EA2025C3A20064B2C7 /* Managed.swift */,
+				F7F8E9ED2025C9A30064B2C7 /* NSManagedObjectContext+Extensions.swift */,
+			);
+			path = Managed;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -494,6 +508,7 @@
 				F7D1484520234D20003A4F63 /* CurrentRideViewController.swift in Sources */,
 				F7201A2D20244DE1002A13DE /* ProfileViewController.swift in Sources */,
 				F7F8E9E52025BE1B0064B2C7 /* Store.swift in Sources */,
+				F7F8E9EB2025C3A20064B2C7 /* Managed.swift in Sources */,
 				F7F8E9D72025B7BA0064B2C7 /* FileSystem.swift in Sources */,
 				F7D1484720234DB9003A4F63 /* CurrentRideViewModel.swift in Sources */,
 				F7D1485720238547003A4F63 /* Texts.swift in Sources */,
@@ -508,6 +523,7 @@
 				F7201A3620245EB9002A13DE /* ProfileOptionCell.swift in Sources */,
 				F7F8E9E72025BE1B0064B2C7 /* Booking.swift in Sources */,
 				F7201A3220244FD3002A13DE /* UIColor+Theme.swift in Sources */,
+				F7F8E9EE2025C9A30064B2C7 /* NSManagedObjectContext+Extensions.swift in Sources */,
 				F7D1484F20235282003A4F63 /* NavigationController.swift in Sources */,
 				F7D1483F202349E0003A4F63 /* NavigationService.swift in Sources */,
 			);

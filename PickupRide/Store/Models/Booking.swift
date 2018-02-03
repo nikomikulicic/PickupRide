@@ -20,3 +20,10 @@ class Booking: NSManagedObject {
     @NSManaged var route: Set<GPSData>
     @NSManaged var actions: Set<RideAction>
 }
+
+extension Booking: Managed {
+    
+    static var defaultSortDescriptors: [NSSortDescriptor] {
+        return [NSSortDescriptor(key: #keyPath(date), ascending: true)]
+    }
+}

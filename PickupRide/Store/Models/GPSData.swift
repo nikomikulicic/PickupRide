@@ -13,3 +13,10 @@ class GPSData: NSManagedObject {
     @NSManaged var date: Date
     @NSManaged var location: Location
 }
+
+extension GPSData: Managed {
+    
+    static var defaultSortDescriptors: [NSSortDescriptor] {
+        return [NSSortDescriptor(key: #keyPath(date), ascending: true)]
+    }
+}

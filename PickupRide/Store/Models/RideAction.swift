@@ -17,22 +17,19 @@ enum RideActionType: String {
     case endRide
 }
 
-private extension RideActionType {
-    var id: String {
-        return String(describing: self)
-    }
-    
-    init?(id: String) {
-        self = RideActionType(rawValue: id)!
-    }
-}
-
 class RideAction: NSManagedObject {
     @NSManaged var date: Date
     @NSManaged private var typeId: String
     
     var type: RideActionType {
-        get { return RideActionType(id: typeId)! }
-        set { typeId = newValue.id }
+        get { return RideActionType(rawValue: typeId)! }
+        set { typeId = String(describing: self) }
+    }
+}
+
+extension RideAction: Managed {
+    
+    static var defaultSortDescriptors: [NSSortDescriptor] {
+        return [NSSortDescriptor(key: #keyPath(date), ascending: true)]
     }
 }
