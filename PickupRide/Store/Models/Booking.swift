@@ -15,8 +15,8 @@ class Booking: NSManagedObject {
     @NSManaged var addressTo: String
     @NSManaged var date: Date
     @NSManaged var numberOfPassengers: Int32
-    @NSManaged var locationFrom: Location?
-    @NSManaged var locationTo: Location?
+    @NSManaged var locationFrom: Location
+    @NSManaged var locationTo: Location
     @NSManaged var route: Set<GPSData>
     @NSManaged var actions: Set<RideAction>
 }

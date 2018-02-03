@@ -27,7 +27,6 @@
 		F7D1485720238547003A4F63 /* Texts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1485620238547003A4F63 /* Texts.swift */; };
 		F7E7E3AE2023417200BF0D50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E7E3AD2023417200BF0D50 /* AppDelegate.swift */; };
 		F7E7E3BB2023417200BF0D50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7E7E3B92023417200BF0D50 /* LaunchScreen.storyboard */; };
-		F7E7E3C62023417200BF0D50 /* PickupRideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E7E3C52023417200BF0D50 /* PickupRideTests.swift */; };
 		F7F8E9D72025B7BA0064B2C7 /* FileSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F8E9D62025B7BA0064B2C7 /* FileSystem.swift */; };
 		F7F8E9E32025BE1B0064B2C7 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F8E9DA2025BE1A0064B2C7 /* CoreDataStack.swift */; };
 		F7F8E9E42025BE1B0064B2C7 /* PickupRide.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F7F8E9DB2025BE1B0064B2C7 /* PickupRide.xcdatamodeld */; };
@@ -38,6 +37,7 @@
 		F7F8E9E92025BE1B0064B2C7 /* GPSData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F8E9E22025BE1B0064B2C7 /* GPSData.swift */; };
 		F7F8E9EB2025C3A20064B2C7 /* Managed.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F8E9EA2025C3A20064B2C7 /* Managed.swift */; };
 		F7F8E9EE2025C9A30064B2C7 /* NSManagedObjectContext+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F8E9ED2025C9A30064B2C7 /* NSManagedObjectContext+Extensions.swift */; };
+		F7F8E9F02025E40B0064B2C7 /* StoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F8E9EF2025E40B0064B2C7 /* StoreTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,7 +78,6 @@
 		F7E7E3BA2023417200BF0D50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7E7E3BC2023417200BF0D50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7E7E3C12023417200BF0D50 /* PickupRideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickupRideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F7E7E3C52023417200BF0D50 /* PickupRideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupRideTests.swift; sourceTree = "<group>"; };
 		F7E7E3C72023417200BF0D50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7F8E9D62025B7BA0064B2C7 /* FileSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSystem.swift; sourceTree = "<group>"; };
 		F7F8E9DA2025BE1A0064B2C7 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataStack.swift; path = PickupRide/Store/CoreDataStack.swift; sourceTree = SOURCE_ROOT; };
@@ -90,6 +89,7 @@
 		F7F8E9E22025BE1B0064B2C7 /* GPSData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPSData.swift; sourceTree = "<group>"; };
 		F7F8E9EA2025C3A20064B2C7 /* Managed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Managed.swift; sourceTree = "<group>"; };
 		F7F8E9ED2025C9A30064B2C7 /* NSManagedObjectContext+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Extensions.swift"; sourceTree = "<group>"; };
+		F7F8E9EF2025E40B0064B2C7 /* StoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,7 +244,7 @@
 		F7E7E3C42023417200BF0D50 /* PickupRideTests */ = {
 			isa = PBXGroup;
 			children = (
-				F7E7E3C52023417200BF0D50 /* PickupRideTests.swift */,
+				F7F8E9EF2025E40B0064B2C7 /* StoreTests.swift */,
 				F7E7E3C72023417200BF0D50 /* Info.plist */,
 			);
 			path = PickupRideTests;
@@ -533,7 +533,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7E7E3C62023417200BF0D50 /* PickupRideTests.swift in Sources */,
+				F7F8E9F02025E40B0064B2C7 /* StoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

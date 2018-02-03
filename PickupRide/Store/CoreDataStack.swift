@@ -16,15 +16,11 @@ enum CoreDataError: Error {
 
 class CoreDataStack {
     
-    private let bundle: Bundle
-    
     let mainContext: NSManagedObjectContext
     
     init(bundle: Bundle, storeURL: URL, storeType: String) throws {
-        self.bundle = bundle
-        
         guard
-            let modelURL = self.bundle.url(forResource: "PickupRide", withExtension: "momd"),
+            let modelURL = bundle.url(forResource: "PickupRide", withExtension: "momd"),
             let managedObjectModel = NSManagedObjectModel(contentsOf: modelURL)
         else {
             throw CoreDataError.modelCouldNotBeCreated
