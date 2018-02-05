@@ -35,7 +35,8 @@ class NavigationService {
     }
     
     func displayInitialViewController() {
-        let viewModel = CurrentRideViewModel()
+        let ride = Ride(initialState: .idle)
+        let viewModel = CurrentRideViewModel(store: store, ride: ride)
         let viewController = CurrentRideViewController(viewModel: viewModel)
         
         viewController.profileTapped.asObservable().subscribe(onNext: { [weak self] in

@@ -45,6 +45,7 @@ class CurrentRideViewController: UIViewController {
         
         viewModel.actions.asObservable().subscribe(onNext: { [weak self] actions in
             self?.updateActionsView(with: actions)
+            self?.subscribeToActions()
         }).disposed(by: disposeBag)
         
         viewModel.actionsEnabled.subscribe(onNext: { [weak self] enabled in
@@ -67,24 +68,23 @@ class CurrentRideViewController: UIViewController {
         actionsView.alpha = enabled ? 1 : 0.3
     }
     
-    private func updateActionsView(with actions: [RideActionData]) {
+    private func updateActionsView(with actions: [RideActionType]) {
         actionsView.arrangedSubviews.forEach { $0.removeFromSuperview() }
         let actionViews = actions.map { createActionView(for: $0) }
         actionViews.forEach { actionsView.addArrangedSubview($0) }
-        
-        subscribeToActions(actionViews)
     }
     
-    private func subscribeToActions(_ actionViews: [RideActionView]) {
-        actionViews.enumerated().forEach { (index, view) in
-            view.tapped
-                .map { index }
-                .bind(onNext: viewModel.actionTapped)
-                .disposed(by: disposeBag)
-        }
+    private func subscribeToActions() {
+        let actionViews = actionsView.arrangedSubviews.flatMap { $0 as? RideActionView }
+        let tappedViewAtIndex = actionViews.enumerated().map { (index, view) in
+            return view.tapped.map { index }
+        }    
+        Observable.merge(tappedViewAtIndex).subscribe(onNext: { [weak self] tappedIndex in
+            self?.viewModel.actionTapped.onNext(tappedIndex)
+        }).disposed(by: disposeBag)
     }
     
-    private func createActionView(for action: RideActionData) -> RideActionView {
+    private func createActionView(for action: RideActionType) -> RideActionView {
         let view = RideActionView()
         view.setUp(for: action)
         view.autoSetDimensions(to: CGSize(width: 100, height: 100))

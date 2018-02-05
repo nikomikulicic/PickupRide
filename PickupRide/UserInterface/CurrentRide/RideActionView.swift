@@ -29,9 +29,11 @@ class RideActionView: UIView {
         loadNib()
     }
     
-    func setUp(for data: RideActionData) {
-        button.setImage(UIImage(from: data.image), for: .normal)
-        label.text = data.title
+    func setUp(for type: RideActionType) {
+        let image = BundleImage.image(for: type)
+        let title = Texts.actionTitle(for: type)
+        button.setImage(UIImage(from: image), for: .normal)
+        label.text = title
     }
     
     private func loadNib() {

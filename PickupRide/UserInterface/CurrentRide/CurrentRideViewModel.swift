@@ -9,12 +9,6 @@
 import Foundation
 import RxSwift
 
-struct RideActionData {
-    let type: RideActionType
-    let image: BundleImage
-    let title: String
-}
-
 struct BookingInput {
     let addressFrom: String
     let addressTo: String
@@ -30,53 +24,45 @@ struct BookingInput {
 
 class CurrentRideViewModel {
     
-    let actions = Variable<[RideActionData]>([])
+    private let store: Store
+    private let ride: Ride
+    private let disposeBag = DisposeBag()
+    
     let addressFrom = PublishSubject<String>()
     let addressTo = PublishSubject<String>()
     let passengers = PublishSubject<String>()
+    let actionTapped = PublishSubject<Int>()
+    
+    var actions: Observable<[RideActionType]> {
+        return ride.state.asObservable().map { $0.actions }
+    }
     
     var actionsEnabled: Observable<Bool> {
-        return Observable
-            .combineLatest(addressFrom, addressTo, passengers) { BookingInput(addressFrom: $0, addressTo: $1, passengers: $2) }
+        return bookingInput
             .map { $0.isValid }
             .startWith(false)
     }
     
     var inputEnabled: Observable<Bool> {
-        return actions.asObservable()
-            .map { $0[0].type == .startRide }
-            .startWith(true)
-    }
-
-    init() {
-        let initialAction = createRideAction(ofType: .startRide)
-        actions.value = [initialAction]
-    }
-
-    func actionTapped(at index: Int) {
-        let tappedActionType = actions.value[index].type
-        let nextActions = nextActionTypes(for: tappedActionType).map { createRideAction(ofType: $0) }
-        actions.value = nextActions
+        return ride.state.asObservable().map { $0 == .idle }
     }
     
-    private func nextActionTypes(for type: RideActionType) -> [RideActionType] {
-        switch type {
-        case .startRide:
-            return [.passengerPickedUp]
-        case .passengerPickedUp:
-            return [.stopOver, .endRide]
-        case .stopOver:
-            return [.continueRide]
-        case .continueRide:
-            return [.stopOver, .endRide]
-        case .endRide:
-            return [.startRide]
+    private var bookingInput: Observable<BookingInput> {
+        return Observable.combineLatest(addressFrom, addressTo, passengers) {
+            BookingInput(addressFrom: $0, addressTo: $1, passengers: $2)
         }
     }
     
-    private func createRideAction(ofType type: RideActionType) -> RideActionData {
-        return RideActionData(type: type,
-                              image: BundleImage.image(for: type),
-                              title: Texts.actionTitle(for: type))
+    init(store: Store, ride: Ride) {
+        self.store = store
+        self.ride = ride
+        
+        let tappedAction = actionTapped
+            .withLatestFrom(actions) { (index, actions) in actions[index] }
+        
+        tappedAction
+            .subscribe(onNext: { [weak self] action in
+                self?.ride.moveToNextState(afterAction: action)
+            }).disposed(by: disposeBag)
     }
 }
