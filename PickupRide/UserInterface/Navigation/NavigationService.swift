@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import CoreData
+import CoreLocation
 
 class NavigationService {
     
@@ -20,6 +21,7 @@ class NavigationService {
     private let fileSystem = FileSystem(fileManager: FileManager.default)
     private let bundle = Bundle.main
     private let store: Store
+    private let locationController: LocationController
     
     init(window: UIWindow) {
         self.window = window
@@ -32,11 +34,14 @@ class NavigationService {
         }
         
         store = Store(stack: coreDataStack)
+        locationController = LocationController(locationManager: CLLocationManager())
+        
+        locationController.requestPermissionsIfNeeded()
     }
     
     func displayInitialViewController() {
         let ride = Ride(initialState: .idle)
-        let viewModel = CurrentRideViewModel(store: store, ride: ride)
+        let viewModel = CurrentRideViewModel(store: store, locationController: locationController, ride: ride)
         let viewController = CurrentRideViewController(viewModel: viewModel)
         
         viewController.profileTapped.asObservable().subscribe(onNext: { [weak self] in

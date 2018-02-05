@@ -26,6 +26,7 @@ struct BookingInput {
 class CurrentRideViewModel {
     
     private let store: Store
+    private let locationController: LocationController
     private let ride: Ride
     private let disposeBag = DisposeBag()
     
@@ -54,8 +55,9 @@ class CurrentRideViewModel {
         }
     }
     
-    init(store: Store, ride: Ride) {
+    init(store: Store, locationController: LocationController, ride: Ride) {
         self.store = store
+        self.locationController = locationController
         self.ride = ride
         
         let tappedAction = actionTapped.withLatestFrom(actions) { (index, actions) in actions[index] }
