@@ -15,9 +15,38 @@ struct RideActionData {
     let title: String
 }
 
+struct BookingInput {
+    let addressFrom: String
+    let addressTo: String
+    let passengers: String
+    
+    var isValid: Bool {
+        let areAllFieldsPopulated = addressFrom.count > 0 && addressTo.count > 0 && passengers.count > 0
+        guard areAllFieldsPopulated else { return false }
+        guard let numberOfPassengers = Int(passengers) else { return false }
+        return numberOfPassengers > 0
+    }
+}
+
 class CurrentRideViewModel {
     
     let actions = Variable<[RideActionData]>([])
+    let addressFrom = PublishSubject<String>()
+    let addressTo = PublishSubject<String>()
+    let passengers = PublishSubject<String>()
+    
+    var actionsEnabled: Observable<Bool> {
+        return Observable
+            .combineLatest(addressFrom, addressTo, passengers) { BookingInput(addressFrom: $0, addressTo: $1, passengers: $2) }
+            .map { $0.isValid }
+            .startWith(false)
+    }
+    
+    var inputEnabled: Observable<Bool> {
+        return actions.asObservable()
+            .map { $0[0].type == .startRide }
+            .startWith(true)
+    }
 
     init() {
         let initialAction = createRideAction(ofType: .startRide)

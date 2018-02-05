@@ -13,6 +13,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CurrentRideViewController" customModule="PickupRide" customModuleProvider="target">
             <connections>
                 <outlet property="actionsView" destination="mk8-XC-OxA" id="bgl-NW-t1W"/>
+                <outlet property="fromAddressTextField" destination="ejf-kV-e3D" id="Pws-V3-URH"/>
+                <outlet property="passengersTextField" destination="LbT-fk-Prq" id="gdm-AU-skp"/>
+                <outlet property="toAddressTextField" destination="O2P-Za-Giy" id="kb2-wS-okW"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Syl-Ap-LQ4"/>
             </connections>
         </placeholder>
@@ -22,18 +25,55 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="335" placeholderIntrinsicHeight="60" translatesAutoresizingMaskIntoConstraints="NO" id="mk8-XC-OxA">
-                    <rect key="frame" x="20" y="487" width="335" height="60"/>
+                    <rect key="frame" x="20" y="211" width="335" height="60"/>
                 </stackView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="From" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ejf-kV-e3D">
+                    <rect key="frame" x="16" y="70" width="343" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="To" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O2P-Za-Giy">
+                    <rect key="frame" x="16" y="108" width="343" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Passengers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8WQ-Fm-6KE">
+                    <rect key="frame" x="16" y="150.5" width="89" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LbT-fk-Prq">
+                    <rect key="frame" x="262" y="146" width="97" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="97" id="XT1-bO-cxo"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                </textField>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mk8-XC-OxA" secondAttribute="trailing" constant="20" id="2Nn-zD-jfo"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="mk8-XC-OxA" secondAttribute="bottom" constant="120" id="7H6-ED-nQi"/>
+                <constraint firstItem="O2P-Za-Giy" firstAttribute="trailing" secondItem="ejf-kV-e3D" secondAttribute="trailing" id="3O4-Y5-zqd"/>
+                <constraint firstItem="LbT-fk-Prq" firstAttribute="top" secondItem="O2P-Za-Giy" secondAttribute="bottom" constant="8" id="40x-MO-qFb"/>
+                <constraint firstItem="O2P-Za-Giy" firstAttribute="leading" secondItem="ejf-kV-e3D" secondAttribute="leading" id="4pG-mf-pWZ"/>
                 <constraint firstItem="mk8-XC-OxA" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="NjS-Zh-vze"/>
+                <constraint firstItem="LbT-fk-Prq" firstAttribute="trailing" secondItem="O2P-Za-Giy" secondAttribute="trailing" id="QXH-nD-Xci"/>
+                <constraint firstItem="ejf-kV-e3D" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="VHb-hT-J7t"/>
+                <constraint firstItem="8WQ-Fm-6KE" firstAttribute="leading" secondItem="O2P-Za-Giy" secondAttribute="leading" id="WOC-ie-fGd"/>
+                <constraint firstItem="O2P-Za-Giy" firstAttribute="top" secondItem="ejf-kV-e3D" secondAttribute="bottom" constant="8" id="ZkK-xO-Nuk"/>
+                <constraint firstItem="mk8-XC-OxA" firstAttribute="top" secondItem="8WQ-Fm-6KE" secondAttribute="bottom" constant="40" id="h0L-Gt-8kR"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ejf-kV-e3D" secondAttribute="trailing" constant="16" id="kz9-vZ-tWb"/>
                 <constraint firstItem="mk8-XC-OxA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="n1V-Sq-cy6"/>
+                <constraint firstItem="ejf-kV-e3D" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="50" id="rdr-yE-2zy"/>
+                <constraint firstItem="LbT-fk-Prq" firstAttribute="centerY" secondItem="8WQ-Fm-6KE" secondAttribute="centerY" id="ywM-44-RqX"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="58" y="50"/>
+            <point key="canvasLocation" x="57.5" y="49.5"/>
         </view>
     </objects>
 </document>

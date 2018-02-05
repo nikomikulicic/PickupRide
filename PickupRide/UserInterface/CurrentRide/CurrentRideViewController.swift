@@ -14,6 +14,9 @@ import PureLayout
 class CurrentRideViewController: UIViewController {
     
     private var profileButton: UIBarButtonItem!
+    @IBOutlet private weak var fromAddressTextField: UITextField!
+    @IBOutlet private weak var toAddressTextField: UITextField!
+    @IBOutlet private weak var passengersTextField: UITextField!
     @IBOutlet private weak var actionsView: UIStackView!
     
     private let disposeBag = DisposeBag()
@@ -36,9 +39,32 @@ class CurrentRideViewController: UIViewController {
     }
     
     private func connectToViewModel() {
+        fromAddressTextField.rx.text.orEmpty.bind(to: viewModel.addressFrom).disposed(by: disposeBag)
+        toAddressTextField.rx.text.orEmpty.bind(to: viewModel.addressTo).disposed(by: disposeBag)
+        passengersTextField.rx.text.orEmpty.bind(to: viewModel.passengers).disposed(by: disposeBag)
+        
         viewModel.actions.asObservable().subscribe(onNext: { [weak self] actions in
             self?.updateActionsView(with: actions)
         }).disposed(by: disposeBag)
+        
+        viewModel.actionsEnabled.subscribe(onNext: { [weak self] enabled in
+            self?.setActionsEnabled(to: enabled)
+        }).disposed(by: disposeBag)
+        
+        viewModel.inputEnabled.subscribe(onNext: { [weak self] enabled in
+            self?.setInputEnabled(to: enabled)
+        }).disposed(by: disposeBag)
+    }
+    
+    private func setInputEnabled(to enabled: Bool) {
+        let views: [UIView] = [fromAddressTextField, toAddressTextField, passengersTextField]
+        views.forEach { $0.isUserInteractionEnabled = enabled }
+        views.forEach { $0.alpha = enabled ? 1 : 0.3 }
+    }
+    
+    private func setActionsEnabled(to enabled: Bool) {
+        actionsView.isUserInteractionEnabled = enabled
+        actionsView.alpha = enabled ? 1 : 0.3
     }
     
     private func updateActionsView(with actions: [RideActionData]) {
