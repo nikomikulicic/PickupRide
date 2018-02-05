@@ -26,6 +26,7 @@
 		F7D1485320237E9E003A4F63 /* RideActionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7D1485220237E9E003A4F63 /* RideActionView.xib */; };
 		F7D1485520237EB5003A4F63 /* RideActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1485420237EB5003A4F63 /* RideActionView.swift */; };
 		F7D1485720238547003A4F63 /* Texts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1485620238547003A4F63 /* Texts.swift */; };
+		F7D270E32028C57800BC82D4 /* RideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D270E22028C57800BC82D4 /* RideTests.swift */; };
 		F7E7E3AE2023417200BF0D50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E7E3AD2023417200BF0D50 /* AppDelegate.swift */; };
 		F7E7E3BB2023417200BF0D50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7E7E3B92023417200BF0D50 /* LaunchScreen.storyboard */; };
 		F7F8E9D72025B7BA0064B2C7 /* FileSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F8E9D62025B7BA0064B2C7 /* FileSystem.swift */; };
@@ -75,6 +76,7 @@
 		F7D1485220237E9E003A4F63 /* RideActionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RideActionView.xib; sourceTree = "<group>"; };
 		F7D1485420237EB5003A4F63 /* RideActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideActionView.swift; sourceTree = "<group>"; };
 		F7D1485620238547003A4F63 /* Texts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texts.swift; sourceTree = "<group>"; };
+		F7D270E22028C57800BC82D4 /* RideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideTests.swift; sourceTree = "<group>"; };
 		F7E7E3AA2023417200BF0D50 /* PickupRide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickupRide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7E7E3AD2023417200BF0D50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7E7E3BA2023417200BF0D50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 		F7E7E3C42023417200BF0D50 /* PickupRideTests */ = {
 			isa = PBXGroup;
 			children = (
+				F7D270E22028C57800BC82D4 /* RideTests.swift */,
 				F7F8E9EF2025E40B0064B2C7 /* StoreTests.swift */,
 				F7E7E3C72023417200BF0D50 /* Info.plist */,
 			);
@@ -538,6 +541,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7F8E9F02025E40B0064B2C7 /* StoreTests.swift in Sources */,
+				F7D270E32028C57800BC82D4 /* RideTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
