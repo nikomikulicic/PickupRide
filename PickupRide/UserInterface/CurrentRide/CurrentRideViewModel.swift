@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import CoreLocation
 
 struct BookingInput {
     let addressFrom: String
@@ -57,12 +58,36 @@ class CurrentRideViewModel {
         self.store = store
         self.ride = ride
         
-        let tappedAction = actionTapped
-            .withLatestFrom(actions) { (index, actions) in actions[index] }
-        
+        let tappedAction = actionTapped.withLatestFrom(actions) { (index, actions) in actions[index] }
         tappedAction
-            .subscribe(onNext: { [weak self] action in
-                self?.ride.moveToNextState(afterAction: action)
+            .withLatestFrom(bookingInput) { (action: $0, input: $1) }
+            .subscribe(onNext: { [weak self] data in
+                self?.handleActionTapped(action: data.action, bookingInput: data.input)
             }).disposed(by: disposeBag)
+    }
+    
+    private func handleActionTapped(action: RideActionType, bookingInput: BookingInput) {
+        if action == .startRide {
+            startRecordingRide(bookingInput: bookingInput)
+        }
+        recordAction(action)
+        ride.moveToNextState(afterAction: action)
+    }
+    
+    private func startRecordingRide(bookingInput: BookingInput) {
+        guard let passengers = Int(bookingInput.passengers) else { return }
+        let locationFrom = Location(latitude: 0, longitude: 0) // TODO: fetch from geocoder
+        let locationTo = Location(latitude: 0, longitude: 0)
+        let currentLocation = Location(latitude: 1, longitude: 1) // TODO: fetch from location services
+        let booking = store.createBooking(addressFrom: bookingInput.addressFrom, addressTo: bookingInput.addressTo,
+                                          locationFrom: locationFrom, locationTo: locationTo,
+                                          date: Date(), numberOfPassengers: passengers)
+        ride.activeBooking = booking
+    }
+    
+    private func recordAction(_ action: RideActionType) {
+        guard let activeBooking = ride.activeBooking else { return }
+        let location = Location(latitude: 1, longitude: 1) // TODO: fetch from location services
+        _ = store.createRideAction(for: activeBooking, location: location, date: Date(), type: action)
     }
 }
