@@ -19,11 +19,13 @@ enum RideActionType: String {
 
 class RideAction: NSManagedObject {
     @NSManaged var date: Date
+    @NSManaged var location: Location
     @NSManaged private var typeId: String
-    
+    @NSManaged var booking: Booking
+
     var type: RideActionType {
         get { return RideActionType(rawValue: typeId)! }
-        set { typeId = String(describing: self) }
+        set { typeId = String(describing: newValue) }
     }
 }
 

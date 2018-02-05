@@ -12,6 +12,7 @@ import CoreData
 class GPSData: NSManagedObject {
     @NSManaged var date: Date
     @NSManaged var location: Location
+    @NSManaged var booking: Booking
 }
 
 extension GPSData: Managed {
