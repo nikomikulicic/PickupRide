@@ -57,15 +57,13 @@ class CurrentRideDataRegistrar {
     
     private func registerAction(_ action: RideActionType, at location: CLLocation) {
         guard let activeBooking = activeBooking else { return }
-        let location = Location(location: location)
-        let rideAction = store.createRideAction(for: activeBooking, location: location, date: Date(), type: action)
+        let rideAction = store.createRideAction(for: activeBooking, location: location.coordinate, date: Date(), type: action)
         networkController.send(action: rideAction)
     }
 
     private func registerGPSData(at location: CLLocation) {
         guard let activeBooking = activeBooking else { return }
-        let location = Location(location: location)
-        let gpsData = store.createGPSData(for: activeBooking, location: location, date: Date())
+        let gpsData = store.createGPSData(for: activeBooking, location: location.coordinate, date: Date())
         networkController.send(gpsData: gpsData)
     }
 

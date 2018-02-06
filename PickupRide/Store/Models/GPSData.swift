@@ -8,11 +8,21 @@
 
 import Foundation
 import CoreData
+import CoreLocation
 
 class GPSData: NSManagedObject {
     @NSManaged var date: Date
-    @NSManaged var location: Location
+    @NSManaged private var latitude: Double
+    @NSManaged private var longitude: Double
     @NSManaged var booking: Booking
+    
+    var location: CLLocationCoordinate2D {
+        get { return CLLocationCoordinate2D(latitude: latitude, longitude: longitude) }
+        set {
+            latitude = newValue.latitude
+            longitude = newValue.longitude
+        }
+    }
 }
 
 extension GPSData: Managed {

@@ -43,7 +43,6 @@
 		F7F8E9E32025BE1B0064B2C7 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F8E9DA2025BE1A0064B2C7 /* CoreDataStack.swift */; };
 		F7F8E9E42025BE1B0064B2C7 /* PickupRide.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F7F8E9DB2025BE1B0064B2C7 /* PickupRide.xcdatamodeld */; };
 		F7F8E9E52025BE1B0064B2C7 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F8E9DD2025BE1B0064B2C7 /* Store.swift */; };
-		F7F8E9E62025BE1B0064B2C7 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F8E9DF2025BE1B0064B2C7 /* Location.swift */; };
 		F7F8E9E72025BE1B0064B2C7 /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F8E9E02025BE1B0064B2C7 /* Booking.swift */; };
 		F7F8E9E82025BE1B0064B2C7 /* RideAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F8E9E12025BE1B0064B2C7 /* RideAction.swift */; };
 		F7F8E9E92025BE1B0064B2C7 /* GPSData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F8E9E22025BE1B0064B2C7 /* GPSData.swift */; };
@@ -107,7 +106,6 @@
 		F7F8E9DA2025BE1A0064B2C7 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataStack.swift; path = PickupRide/Store/CoreDataStack.swift; sourceTree = SOURCE_ROOT; };
 		F7F8E9DC2025BE1B0064B2C7 /* PickupRide.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PickupRide.xcdatamodel; sourceTree = "<group>"; };
 		F7F8E9DD2025BE1B0064B2C7 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Store.swift; path = PickupRide/Store/Store.swift; sourceTree = SOURCE_ROOT; };
-		F7F8E9DF2025BE1B0064B2C7 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		F7F8E9E02025BE1B0064B2C7 /* Booking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
 		F7F8E9E12025BE1B0064B2C7 /* RideAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RideAction.swift; sourceTree = "<group>"; };
 		F7F8E9E22025BE1B0064B2C7 /* GPSData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPSData.swift; sourceTree = "<group>"; };
@@ -321,7 +319,6 @@
 		F7F8E9DE2025BE1B0064B2C7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F7F8E9DF2025BE1B0064B2C7 /* Location.swift */,
 				F7F8E9E02025BE1B0064B2C7 /* Booking.swift */,
 				F7F8E9E12025BE1B0064B2C7 /* RideAction.swift */,
 				F7F8E9E22025BE1B0064B2C7 /* GPSData.swift */,
@@ -583,7 +580,6 @@
 				F7D1485720238547003A4F63 /* Texts.swift in Sources */,
 				F7199F422029BDC0003DE31F /* CurrentRideDataRegistrar.swift in Sources */,
 				F7F8E9E92025BE1B0064B2C7 /* GPSData.swift in Sources */,
-				F7F8E9E62025BE1B0064B2C7 /* Location.swift in Sources */,
 				F778164D2029CBE200B01BDA /* NetworkingController.swift in Sources */,
 				F7D1484A20234F2E003A4F63 /* BundleImage.swift in Sources */,
 				F7D1485520237EB5003A4F63 /* RideActionView.swift in Sources */,

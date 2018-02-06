@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 class Store {
     
@@ -17,7 +18,7 @@ class Store {
     }
     
     func bookings() throws -> [Booking] {
-        let bookings: [Booking] = try! stack.mainContext.fetch(Booking.sortedFetchRequest)
+        let bookings: [Booking] = try stack.mainContext.fetch(Booking.sortedFetchRequest)
         return bookings
     }
     
@@ -36,7 +37,7 @@ class Store {
         return booking
     }
 
-    func createGPSData(for booking: Booking, location: Location, date: Date) -> GPSData {
+    func createGPSData(for booking: Booking, location: CLLocationCoordinate2D, date: Date) -> GPSData {
         let gpsData: GPSData = stack.mainContext.insertObject()
         gpsData.location = location
         gpsData.date = date
@@ -47,7 +48,7 @@ class Store {
         return gpsData
     }
     
-    func createRideAction(for booking: Booking, location: Location, date: Date, type: RideActionType) -> RideAction {
+    func createRideAction(for booking: Booking, location: CLLocationCoordinate2D, date: Date, type: RideActionType) -> RideAction {
         let action: RideAction = stack.mainContext.insertObject()
         action.location = location
         action.date = date

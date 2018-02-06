@@ -11,18 +11,20 @@
     </entity>
     <entity name="GPSData" representedClassName=".GPSData" syncable="YES">
         <attribute name="date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="location" attributeType="Transformable" syncable="YES"/>
+        <attribute name="latitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="booking" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Booking" inverseName="route" inverseEntity="Booking" syncable="YES"/>
     </entity>
     <entity name="RideAction" representedClassName=".RideAction" syncable="YES">
         <attribute name="date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="location" attributeType="Transformable" syncable="YES"/>
+        <attribute name="latitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="typeId" attributeType="String" syncable="YES"/>
         <relationship name="booking" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Booking" inverseName="actions" inverseEntity="Booking" syncable="YES"/>
     </entity>
     <elements>
         <element name="Booking" positionX="-63" positionY="-18" width="128" height="150"/>
-        <element name="GPSData" positionX="-27" positionY="45" width="128" height="90"/>
-        <element name="RideAction" positionX="0" positionY="63" width="128" height="105"/>
+        <element name="GPSData" positionX="-27" positionY="45" width="128" height="105"/>
+        <element name="RideAction" positionX="0" positionY="63" width="128" height="120"/>
     </elements>
 </model>

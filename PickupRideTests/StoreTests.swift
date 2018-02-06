@@ -9,6 +9,7 @@
 import Foundation
 import XCTest
 import CoreData
+import CoreLocation
 @testable import PickupRide
 
 class StoreTests: XCTestCase {
@@ -35,7 +36,7 @@ class StoreTests: XCTestCase {
     func testThatBookingCanBeCreated() {
         let stack = createInMemoryStack()
         let store = Store(stack: stack)
-        let booking = store.createBooking(addressFrom: "A", addressTo: "B", date: Date(), numberOfPassengers: 2)
+        let booking = try! store.createBooking(addressFrom: "A", addressTo: "B", date: Date(), numberOfPassengers: 2)
 
         let bookings: [Booking] = try! stack.mainContext.fetch()
         XCTAssertEqual(bookings.count, 1)
@@ -48,24 +49,26 @@ class StoreTests: XCTestCase {
     func testThatGPSDataCanBeAddedToBooking() {
         let stack = createInMemoryStack()
         let store = Store(stack: stack)
-        let booking = store.createBooking(addressFrom: "A", addressTo: "B", date: Date(), numberOfPassengers: 2)
-        let gpsData = store.createGPSData(for: booking, location: Location(latitude: 1, longitude: 1), date: Date())
+        let booking = try! store.createBooking(addressFrom: "A", addressTo: "B", date: Date(), numberOfPassengers: 2)
+        let gpsData = store.createGPSData(for: booking, location: CLLocationCoordinate2D(latitude: 1, longitude: 1), date: Date())
         
         let bookings: [Booking] = try! stack.mainContext.fetch()
         XCTAssertEqual(bookings[0].route.count, 1)
-        XCTAssertEqual(bookings[0].route.first!.location, gpsData.location)
+        XCTAssertEqual(bookings[0].route.first!.location.latitude, gpsData.location.longitude)
+        XCTAssertEqual(bookings[0].route.first!.location.longitude, gpsData.location.longitude)
         XCTAssertEqual(bookings[0].route.first!.date, gpsData.date)
     }
     
     func testThatRideActionCanBeAddedToBooking() {
         let stack = createInMemoryStack()
         let store = Store(stack: stack)
-        let booking = store.createBooking(addressFrom: "A", addressTo: "B", date: Date(), numberOfPassengers: 2)
-        let action = store.createRideAction(for: booking, location: Location(latitude: 1, longitude: 1), date: Date(), type: .startRide)
+        let booking = try! store.createBooking(addressFrom: "A", addressTo: "B", date: Date(), numberOfPassengers: 2)
+        let action = store.createRideAction(for: booking, location: CLLocationCoordinate2D(latitude: 1, longitude: 1), date: Date(), type: .startRide)
         
         let bookings: [Booking] = try! stack.mainContext.fetch()
         XCTAssertEqual(bookings[0].actions.count, 1)
-        XCTAssertEqual(bookings[0].actions.first!.location, action.location)
+        XCTAssertEqual(bookings[0].actions.first!.location.latitude, action.location.longitude)
+        XCTAssertEqual(bookings[0].actions.first!.location.longitude, action.location.longitude)
         XCTAssertEqual(bookings[0].actions.first!.date, action.date)
         XCTAssertEqual(bookings[0].actions.first!.type, action.type)
     }
