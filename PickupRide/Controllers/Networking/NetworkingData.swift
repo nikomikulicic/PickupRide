@@ -23,7 +23,7 @@ class GPSAPIData: Codable {
     let date: String
     
     init(from data: GPSData) {
-        bookingId = 0
+        bookingId = data.booking.id
         latitude = data.location.latitude
         longitude = data.location.longitude
         date = DateFormatter.dateTimeFormatter.string(from: data.date)
@@ -49,7 +49,7 @@ class RideActionAPIData: Codable {
     let type: RideActionType
     
     init(from data: RideAction) {
-        bookingId = 0
+        bookingId = data.booking.id
         latitude = data.location.latitude
         longitude = data.location.longitude
         type = data.type
@@ -72,7 +72,7 @@ class BookingAPIData: Codable {
     let passengers: Int32
     
     init(from data: Booking) {
-        id = 0
+        id = data.id
         addressFrom = data.addressFrom
         addressTo = data.addressTo
         passengers = data.numberOfPassengers

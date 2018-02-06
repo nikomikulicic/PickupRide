@@ -11,6 +11,7 @@ import CoreLocation
 
 class Booking: NSManagedObject {
     
+    @NSManaged var id: Int32
     @NSManaged var addressFrom: String
     @NSManaged var addressTo: String
     @NSManaged var date: Date

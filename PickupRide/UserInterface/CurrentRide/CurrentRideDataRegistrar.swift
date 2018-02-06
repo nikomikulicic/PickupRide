@@ -41,9 +41,16 @@ class CurrentRideDataRegistrar {
     }
 
     private func activateBooking(for bookingInput: BookingInput) {
-        guard let passengers = Int(bookingInput.passengers) else { return }
-        let booking = store.createBooking(addressFrom: bookingInput.addressFrom, addressTo: bookingInput.addressTo,
-                                          date: Date(), numberOfPassengers: passengers)
+        guard
+            let passengers = Int(bookingInput.passengers),
+            let booking = try? store.createBooking(addressFrom: bookingInput.addressFrom,
+                                                   addressTo: bookingInput.addressTo,
+                                                   date: Date(),
+                                                   numberOfPassengers: passengers)
+        else {
+            return
+        }
+        
         networkController.send(booking: booking)
         activeBooking = booking
     }

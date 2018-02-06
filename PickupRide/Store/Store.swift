@@ -16,12 +16,15 @@ class Store {
         self.stack = stack
     }
     
-    func createBooking(addressFrom: String, addressTo: String, date: Date, numberOfPassengers: Int) -> Booking {
+    func createBooking(addressFrom: String, addressTo: String, date: Date, numberOfPassengers: Int) throws -> Booking {
+        let numberOfBookings = try stack.mainContext.count(for: Booking.sortedFetchRequest)
+        
         let booking: Booking = stack.mainContext.insertObject()
         booking.addressFrom = addressFrom
         booking.addressTo = addressTo
         booking.date = date
         booking.numberOfPassengers = Int32(numberOfPassengers)
+        booking.id = Int32(numberOfBookings)
         
         save()
         
