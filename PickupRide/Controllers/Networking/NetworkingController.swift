@@ -21,7 +21,7 @@ class NetworkingController {
     private let disposeBag = DisposeBag()
 
     private var url: URL {
-        return URL(string: "http://localhost:3000/jsons")! // TODO: change to real api
+        return URL(string: "https://test.mother.i-ways.hr?json=1")!
     }
     
     init(session: URLSession) {
