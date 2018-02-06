@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		975ED73555ADEFDF9080A629 /* Pods_PickupRideTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 998E9216DC0177AE0F4765B6 /* Pods_PickupRideTests.framework */; };
 		DBC1D3D49EA91E6C02F83F70 /* Pods_PickupRide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFEA95A124EF7FB58454E03 /* Pods_PickupRide.framework */; };
+		F7199F422029BDC0003DE31F /* CurrentRideDataRegistrar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7199F412029BDC0003DE31F /* CurrentRideDataRegistrar.swift */; };
 		F7201A2D20244DE1002A13DE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7201A2B20244DE1002A13DE /* ProfileViewController.swift */; };
 		F7201A2E20244DE1002A13DE /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7201A2C20244DE1002A13DE /* ProfileViewController.xib */; };
 		F7201A3020244DEF002A13DE /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7201A2F20244DEF002A13DE /* ProfileViewModel.swift */; };
@@ -60,6 +61,7 @@
 		8AFCD9CABD33C29025C8DF1F /* Pods-PickupRide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickupRide.release.xcconfig"; path = "Pods/Target Support Files/Pods-PickupRide/Pods-PickupRide.release.xcconfig"; sourceTree = "<group>"; };
 		998E9216DC0177AE0F4765B6 /* Pods_PickupRideTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PickupRideTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEFEA95A124EF7FB58454E03 /* Pods_PickupRide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PickupRide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7199F412029BDC0003DE31F /* CurrentRideDataRegistrar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRideDataRegistrar.swift; sourceTree = "<group>"; };
 		F7201A2B20244DE1002A13DE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F7201A2C20244DE1002A13DE /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		F7201A2F20244DEF002A13DE /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				F77DA1C220288730007B5707 /* Ride.swift */,
+				F7199F412029BDC0003DE31F /* CurrentRideDataRegistrar.swift */,
 				F7D1484120234CF9003A4F63 /* CurrentRideViewController.xib */,
 				F7D1484420234D20003A4F63 /* CurrentRideViewController.swift */,
 				F7D1484620234DB9003A4F63 /* CurrentRideViewModel.swift */,
@@ -522,6 +525,7 @@
 				F77DA1C320288730007B5707 /* Ride.swift in Sources */,
 				F7D1484720234DB9003A4F63 /* CurrentRideViewModel.swift in Sources */,
 				F7D1485720238547003A4F63 /* Texts.swift in Sources */,
+				F7199F422029BDC0003DE31F /* CurrentRideDataRegistrar.swift in Sources */,
 				F7F8E9E92025BE1B0064B2C7 /* GPSData.swift in Sources */,
 				F7F8E9E62025BE1B0064B2C7 /* Location.swift in Sources */,
 				F7D1484A20234F2E003A4F63 /* BundleImage.swift in Sources */,

@@ -10,12 +10,6 @@ import Foundation
 import CoreLocation
 import RxSwift
 
-enum LocationError: Error {
-    case permissionDenied
-    case locationUpdateFailed
-    case other
-}
-
 class LocationController: NSObject {
     
     private let locationManager: CLLocationManager
@@ -26,8 +20,8 @@ class LocationController: NSObject {
         return CLLocationManager.authorizationStatus() == .authorizedAlways
     }
     
-    var location: Observable<CLLocation> {
-        return delegate.location.asObservable()
+    var location: CLLocation? {
+        return locationManager.location
     }
 
     init(locationManager: CLLocationManager) {
@@ -53,33 +47,12 @@ class LocationController: NSObject {
 
 class LocationManagerDelegate: NSObject, CLLocationManagerDelegate {
     
-    let location = PublishSubject<CLLocation>()
-    
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
         case .authorizedAlways:
             manager.startUpdatingLocation()
         default:
             manager.stopUpdatingLocation()
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let latestLocation = locations.last else { return }
-        location.onNext(latestLocation)
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        guard let error = error as? CLError else {
-            location.onError(LocationError.other)
-            return
-        }
-        
-        switch error.code {
-        case CLError.denied:
-            location.onError(LocationError.permissionDenied)
-        default:
-            location.onError(LocationError.locationUpdateFailed)
         }
     }
 }

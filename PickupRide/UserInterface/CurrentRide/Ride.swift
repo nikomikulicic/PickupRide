@@ -55,7 +55,6 @@ enum RideState {
 class Ride {
     
     private(set) var state = Variable<RideState>(.idle)
-    var activeBooking: Booking?
     
     init(initialState: RideState) {
         state.value = initialState
