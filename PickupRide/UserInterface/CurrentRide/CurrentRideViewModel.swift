@@ -78,11 +78,8 @@ class CurrentRideViewModel {
     
     private func startRecordingRide(bookingInput: BookingInput) {
         guard let passengers = Int(bookingInput.passengers) else { return }
-        let locationFrom = Location(latitude: 0, longitude: 0) // TODO: fetch from geocoder
-        let locationTo = Location(latitude: 0, longitude: 0)
         let currentLocation = Location(latitude: 1, longitude: 1) // TODO: fetch from location services
         let booking = store.createBooking(addressFrom: bookingInput.addressFrom, addressTo: bookingInput.addressTo,
-                                          locationFrom: locationFrom, locationTo: locationTo,
                                           date: Date(), numberOfPassengers: passengers)
         ride.activeBooking = booking
     }

@@ -35,16 +35,12 @@ class StoreTests: XCTestCase {
     func testThatBookingCanBeCreated() {
         let stack = createInMemoryStack()
         let store = Store(stack: stack)
-        let booking = store.createBooking(addressFrom: "A", addressTo: "B",
-                                          locationFrom: Location(latitude: 0, longitude: 0), locationTo: Location(latitude: 0, longitude: 0),
-                                          date: Date(), numberOfPassengers: 2)
+        let booking = store.createBooking(addressFrom: "A", addressTo: "B", date: Date(), numberOfPassengers: 2)
 
         let bookings: [Booking] = try! stack.mainContext.fetch()
         XCTAssertEqual(bookings.count, 1)
         XCTAssertEqual(bookings[0].addressFrom, booking.addressFrom)
         XCTAssertEqual(bookings[0].addressTo, booking.addressTo)
-        XCTAssertEqual(bookings[0].locationFrom, booking.locationFrom)
-        XCTAssertEqual(bookings[0].locationTo, booking.locationTo)
         XCTAssertEqual(bookings[0].date, booking.date)
         XCTAssertEqual(bookings[0].numberOfPassengers, booking.numberOfPassengers)
     }
@@ -52,9 +48,7 @@ class StoreTests: XCTestCase {
     func testThatGPSDataCanBeAddedToBooking() {
         let stack = createInMemoryStack()
         let store = Store(stack: stack)
-        let booking = store.createBooking(addressFrom: "A", addressTo: "B",
-                                          locationFrom: Location(latitude: 0, longitude: 0), locationTo: Location(latitude: 0, longitude: 0),
-                                          date: Date(), numberOfPassengers: 2)
+        let booking = store.createBooking(addressFrom: "A", addressTo: "B", date: Date(), numberOfPassengers: 2)
         let gpsData = store.createGPSData(for: booking, location: Location(latitude: 1, longitude: 1), date: Date())
         
         let bookings: [Booking] = try! stack.mainContext.fetch()
@@ -66,9 +60,7 @@ class StoreTests: XCTestCase {
     func testThatRideActionCanBeAddedToBooking() {
         let stack = createInMemoryStack()
         let store = Store(stack: stack)
-        let booking = store.createBooking(addressFrom: "A", addressTo: "B",
-                                          locationFrom: Location(latitude: 0, longitude: 0), locationTo: Location(latitude: 0, longitude: 0),
-                                          date: Date(), numberOfPassengers: 2)
+        let booking = store.createBooking(addressFrom: "A", addressTo: "B", date: Date(), numberOfPassengers: 2)
         let action = store.createRideAction(for: booking, location: Location(latitude: 1, longitude: 1), date: Date(), type: .startRide)
         
         let bookings: [Booking] = try! stack.mainContext.fetch()

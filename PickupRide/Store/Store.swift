@@ -16,13 +16,10 @@ class Store {
         self.stack = stack
     }
     
-    func createBooking(addressFrom: String, addressTo: String, locationFrom: Location, locationTo: Location,
-                       date: Date, numberOfPassengers: Int) -> Booking {
+    func createBooking(addressFrom: String, addressTo: String, date: Date, numberOfPassengers: Int) -> Booking {
         let booking: Booking = stack.mainContext.insertObject()
         booking.addressFrom = addressFrom
         booking.addressTo = addressTo
-        booking.locationFrom = locationFrom
-        booking.locationTo = locationTo
         booking.date = date
         booking.numberOfPassengers = Int32(numberOfPassengers)
         
