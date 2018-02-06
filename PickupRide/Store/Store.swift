@@ -22,6 +22,20 @@ class Store {
         return bookings
     }
     
+    func gpsData(for booking: Booking) throws -> [GPSData] {
+        let predicate = NSPredicate(format: "%K == %@", "booking", booking)
+        let request = GPSData.sortedFetchRequest(with: predicate)
+        let gpsData: [GPSData] = try stack.mainContext.fetch(request)
+        return gpsData
+    }
+    
+    func actions(for booking: Booking) throws -> [RideAction] {
+        let predicate = NSPredicate(format: "%K == %@", "booking", booking)
+        let request = RideAction.sortedFetchRequest(with: predicate)
+        let actions: [RideAction] = try stack.mainContext.fetch(request)
+        return actions
+    }
+    
     func createBooking(addressFrom: String, addressTo: String, date: Date, numberOfPassengers: Int) throws -> Booking {
         let numberOfBookings = try stack.mainContext.count(for: Booking.sortedFetchRequest)
         

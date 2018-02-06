@@ -86,7 +86,11 @@ class NavigationService {
     }
     
     private func pushRideDetailsViewController(booking: Booking) {
-        print("Push ride details")
+        let gpsData = (try? store.gpsData(for: booking)) ?? []
+        let actions = (try? store.actions(for: booking)) ?? []
+        let viewModel = RideDetailsViewModel(gpsData: gpsData, actions: actions)
+        let viewController = RideDetailsViewController(viewModel: viewModel)
+        navigationController.pushViewController(viewController, animated: true)
     }
     
     private func openAppSettings() {

@@ -25,6 +25,9 @@
 		F7805673202A07ED0067139B /* PreviousRideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7805671202A07ED0067139B /* PreviousRideCell.swift */; };
 		F7805674202A07ED0067139B /* PreviousRideCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7805672202A07ED0067139B /* PreviousRideCell.xib */; };
 		F7805676202A0B8E0067139B /* PreviousRidesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7805675202A0B8E0067139B /* PreviousRidesViewModel.swift */; };
+		F780567A202A20510067139B /* RideDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7805678202A20510067139B /* RideDetailsViewController.swift */; };
+		F780567B202A20510067139B /* RideDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7805679202A20510067139B /* RideDetailsViewController.xib */; };
+		F780567D202A205E0067139B /* RideDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F780567C202A205E0067139B /* RideDetailsViewModel.swift */; };
 		F7D1483F202349E0003A4F63 /* NavigationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1483E202349E0003A4F63 /* NavigationService.swift */; };
 		F7D1484220234CF9003A4F63 /* CurrentRideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7D1484120234CF9003A4F63 /* CurrentRideViewController.xib */; };
 		F7D1484520234D20003A4F63 /* CurrentRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1484420234D20003A4F63 /* CurrentRideViewController.swift */; };
@@ -84,6 +87,9 @@
 		F7805671202A07ED0067139B /* PreviousRideCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousRideCell.swift; sourceTree = "<group>"; };
 		F7805672202A07ED0067139B /* PreviousRideCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreviousRideCell.xib; sourceTree = "<group>"; };
 		F7805675202A0B8E0067139B /* PreviousRidesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousRidesViewModel.swift; sourceTree = "<group>"; };
+		F7805678202A20510067139B /* RideDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideDetailsViewController.swift; sourceTree = "<group>"; };
+		F7805679202A20510067139B /* RideDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RideDetailsViewController.xib; sourceTree = "<group>"; };
+		F780567C202A205E0067139B /* RideDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideDetailsViewModel.swift; sourceTree = "<group>"; };
 		F7D1483E202349E0003A4F63 /* NavigationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationService.swift; sourceTree = "<group>"; };
 		F7D1484120234CF9003A4F63 /* CurrentRideViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentRideViewController.xib; sourceTree = "<group>"; };
 		F7D1484420234D20003A4F63 /* CurrentRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRideViewController.swift; sourceTree = "<group>"; };
@@ -208,6 +214,16 @@
 			path = PreviousRides;
 			sourceTree = "<group>";
 		};
+		F7805677202A20390067139B /* RideDetails */ = {
+			isa = PBXGroup;
+			children = (
+				F7805679202A20510067139B /* RideDetailsViewController.xib */,
+				F7805678202A20510067139B /* RideDetailsViewController.swift */,
+				F780567C202A205E0067139B /* RideDetailsViewModel.swift */,
+			);
+			path = RideDetails;
+			sourceTree = "<group>";
+		};
 		F7D1483C202349AA003A4F63 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +237,7 @@
 		F7D1483D202349B8003A4F63 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
+				F7805677202A20390067139B /* RideDetails */,
 				F7D1484320234D0F003A4F63 /* CurrentRide */,
 				F7D1484D20235273003A4F63 /* Navigation */,
 				F780566C202A07880067139B /* PreviousRides */,
@@ -433,6 +450,7 @@
 				F7201A3720245EB9002A13DE /* ProfileOptionCell.xib in Resources */,
 				F7D1485320237E9E003A4F63 /* RideActionView.xib in Resources */,
 				F7E7E3BB2023417200BF0D50 /* LaunchScreen.storyboard in Resources */,
+				F780567B202A20510067139B /* RideDetailsViewController.xib in Resources */,
 				F7D1484C20235170003A4F63 /* Assets.xcassets in Resources */,
 				F7805670202A07C10067139B /* PreviousRidesViewController.xib in Resources */,
 				F7201A2E20244DE1002A13DE /* ProfileViewController.xib in Resources */,
@@ -571,6 +589,7 @@
 				F7F8E9E32025BE1B0064B2C7 /* CoreDataStack.swift in Sources */,
 				F780566F202A07C10067139B /* PreviousRidesViewController.swift in Sources */,
 				F7D1484520234D20003A4F63 /* CurrentRideViewController.swift in Sources */,
+				F780567A202A20510067139B /* RideDetailsViewController.swift in Sources */,
 				F7201A2D20244DE1002A13DE /* ProfileViewController.swift in Sources */,
 				F7F8E9E52025BE1B0064B2C7 /* Store.swift in Sources */,
 				F7F8E9EB2025C3A20064B2C7 /* Managed.swift in Sources */,
@@ -589,6 +608,7 @@
 				F7201A3020244DEF002A13DE /* ProfileViewModel.swift in Sources */,
 				F7D270E52028CB6200BC82D4 /* LocationController.swift in Sources */,
 				F7E7E3AE2023417200BF0D50 /* AppDelegate.swift in Sources */,
+				F780567D202A205E0067139B /* RideDetailsViewModel.swift in Sources */,
 				F7201A3620245EB9002A13DE /* ProfileOptionCell.swift in Sources */,
 				F7F8E9E72025BE1B0064B2C7 /* Booking.swift in Sources */,
 				F78056672029EB090067139B /* NetworkingData.swift in Sources */,
