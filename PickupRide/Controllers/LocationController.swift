@@ -10,22 +10,38 @@ import Foundation
 import CoreLocation
 import RxSwift
 
+enum LocationError: Error {
+    case permissionDenied
+    case locationUpdateFailed
+    case other
+}
+
 class LocationController: NSObject {
     
     private let locationManager: CLLocationManager
     private let disposeBag = DisposeBag()
-    private var locationUpdateSubscription: Disposable?
-    private let locationUpdateInterval = 5.0
+    private let delegate = LocationManagerDelegate()
     
+    private var hasAlwaysPermission: Bool {
+        return CLLocationManager.authorizationStatus() == .authorizedAlways
+    }
+    
+    var location: Observable<CLLocation> {
+        return delegate.location.asObservable()
+    }
+
     init(locationManager: CLLocationManager) {
         self.locationManager = locationManager
         super.init()
         
+        locationManager.delegate = delegate
         locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
     }
     
-    private var hasAlwaysPermission: Bool {
-        return CLLocationManager.authorizationStatus() == .authorizedAlways
+    func startUpdatingLocationIfAllowed() {
+        if hasAlwaysPermission {
+            locationManager.startUpdatingLocation()
+        }
     }
     
     func requestPermissionsIfNeeded() {
@@ -33,39 +49,20 @@ class LocationController: NSObject {
             locationManager.requestAlwaysAuthorization()
         }
     }
-    
-    func startUpdatingLocation() -> Observable<CLLocation> {
-        let delegate = LocationManagerDelegate()
-        locationManager.delegate = delegate
-        
-       return Observable
-            .just(())
-            .do { [weak self] in self?.startRequestingLocation() }
-            .flatMap { delegate.location.asObservable() }
-    }
-    
-    func stopUpdatingLocation() {
-        locationManager.stopUpdatingLocation()
-        locationUpdateSubscription?.dispose()
-    }
-    
-    private func startRequestingLocation() {
-        locationManager.requestLocation()
-
-        guard hasAlwaysPermission else { return }
-        locationUpdateSubscription = Observable<Int>
-            .interval(locationUpdateInterval, scheduler: MainScheduler.instance)
-            .map { _ in () }
-            .startWith(())
-            .subscribe(onNext: { [weak self] _ in
-                self?.locationManager.requestLocation()
-            })
-    }
 }
 
 class LocationManagerDelegate: NSObject, CLLocationManagerDelegate {
     
     let location = PublishSubject<CLLocation>()
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .authorizedAlways:
+            manager.startUpdatingLocation()
+        default:
+            manager.stopUpdatingLocation()
+        }
+    }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let latestLocation = locations.last else { return }
@@ -73,6 +70,16 @@ class LocationManagerDelegate: NSObject, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("Error in location")
+        guard let error = error as? CLError else {
+            location.onError(LocationError.other)
+            return
+        }
+        
+        switch error.code {
+        case CLError.denied:
+            location.onError(LocationError.permissionDenied)
+        default:
+            location.onError(LocationError.locationUpdateFailed)
+        }
     }
 }

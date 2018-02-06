@@ -37,6 +37,7 @@ class NavigationService {
         locationController = LocationController(locationManager: CLLocationManager())
         
         locationController.requestPermissionsIfNeeded()
+        locationController.startUpdatingLocationIfAllowed()
     }
     
     func displayInitialViewController() {
