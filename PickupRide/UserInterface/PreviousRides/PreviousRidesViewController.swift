@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class PreviousRidesViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView!
    
+    private let disposeBag = DisposeBag()
     private let cellName = String(describing: PreviousRideCell.self)
     private var viewModel: PreviousRidesViewModel!
     
@@ -22,10 +25,28 @@ class PreviousRidesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
-        title = "Previous rides"
+
+        setUpAppearance()
+        configureTableView()
+        connectToViewModel()
+    }
+    
+    private func configureTableView() {
         tableView.dataSource = self
         tableView.register(UINib(nibName: cellName, bundle: nil), forCellReuseIdentifier: cellName)
+    }
+    
+    private func setUpAppearance() {
+        title = "Previous rides"
+        view.backgroundColor = UIColor.prBackgroundGray
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+    
+    private func connectToViewModel() {
+        tableView.rx.itemSelected
+            .map { $0.row }
+            .bind(onNext: viewModel.itemTapped)
+            .disposed(by: disposeBag)
     }
 }
 

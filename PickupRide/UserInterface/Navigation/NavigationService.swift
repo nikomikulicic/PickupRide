@@ -78,7 +78,15 @@ class NavigationService {
         let viewModel = PreviousRidesViewModel(previousRides: bookings)
         let viewController = PreviousRidesViewController(viewModel: viewModel)
         
+        viewModel.rideTapped.subscribe(onNext: { [weak self] booking in
+            self?.pushRideDetailsViewController(booking: booking)
+        }).disposed(by: disposeBag)
+        
         navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    private func pushRideDetailsViewController(booking: Booking) {
+        print("Push ride details")
     }
     
     private func openAppSettings() {
