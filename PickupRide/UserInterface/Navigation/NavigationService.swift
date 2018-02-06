@@ -74,7 +74,11 @@ class NavigationService {
     }
     
     private func pushPreviousRidesViewController() {
-        print("Previous rides")
+        let bookings = (try? store.bookings()) ?? []
+        let viewModel = PreviousRidesViewModel(previousRides: bookings)
+        let viewController = PreviousRidesViewController(viewModel: viewModel)
+        
+        navigationController.pushViewController(viewController, animated: true)
     }
     
     private func openAppSettings() {

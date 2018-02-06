@@ -16,6 +16,11 @@ class Store {
         self.stack = stack
     }
     
+    func bookings() throws -> [Booking] {
+        let bookings: [Booking] = try! stack.mainContext.fetch(Booking.sortedFetchRequest)
+        return bookings
+    }
+    
     func createBooking(addressFrom: String, addressTo: String, date: Date, numberOfPassengers: Int) throws -> Booking {
         let numberOfBookings = try stack.mainContext.count(for: Booking.sortedFetchRequest)
         

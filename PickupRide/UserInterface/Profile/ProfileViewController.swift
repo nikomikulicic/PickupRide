@@ -20,7 +20,7 @@ class ProfileViewController: UIViewController {
 
     private var viewModel: ProfileViewModel!
     private let disposeBag = DisposeBag()
-    private let cellReuseIdentifier = String(describing: ProfileOptionCell.self)
+    private let cellName = String(describing: ProfileOptionCell.self)
     
     convenience init(viewModel: ProfileViewModel) {
         self.init()
@@ -48,14 +48,14 @@ class ProfileViewController: UIViewController {
     }
     
     private func configureTableView() {
-        let nibName = cellReuseIdentifier
-        optionsTableView.register(UINib(nibName: nibName, bundle: nil), forCellReuseIdentifier: cellReuseIdentifier)
+        optionsTableView.register(UINib(nibName: cellName, bundle: nil), forCellReuseIdentifier: cellName)
         optionsTableView.dataSource = self
     }
     
     private func setUpAppearance() {
-        view.backgroundColor = UIColor.prBackgroundGray
         title = "Profile"
+        view.backgroundColor = UIColor.prBackgroundGray
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 }
 
@@ -66,7 +66,7 @@ extension ProfileViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! ProfileOptionCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellName) as! ProfileOptionCell
         let option = viewModel.options[indexPath.row]
         cell.setUp(for: option)
         

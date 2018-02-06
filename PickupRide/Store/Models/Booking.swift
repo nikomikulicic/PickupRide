@@ -23,6 +23,6 @@ class Booking: NSManagedObject {
 extension Booking: Managed {
     
     static var defaultSortDescriptors: [NSSortDescriptor] {
-        return [NSSortDescriptor(key: #keyPath(date), ascending: true)]
+        return [NSSortDescriptor(key: #keyPath(date), ascending: false)]
     }
 }
