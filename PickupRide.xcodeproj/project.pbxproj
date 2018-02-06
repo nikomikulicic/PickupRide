@@ -16,7 +16,10 @@
 		F7201A3220244FD3002A13DE /* UIColor+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7201A3120244FD3002A13DE /* UIColor+Theme.swift */; };
 		F7201A3620245EB9002A13DE /* ProfileOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7201A3420245EB9002A13DE /* ProfileOptionCell.swift */; };
 		F7201A3720245EB9002A13DE /* ProfileOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7201A3520245EB9002A13DE /* ProfileOptionCell.xib */; };
+		F778164D2029CBE200B01BDA /* NetworkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F778164C2029CBE200B01BDA /* NetworkingController.swift */; };
 		F77DA1C320288730007B5707 /* Ride.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77DA1C220288730007B5707 /* Ride.swift */; };
+		F78056672029EB090067139B /* NetworkingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78056662029EB090067139B /* NetworkingData.swift */; };
+		F780566B2029F2E80067139B /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F780566A2029F2E80067139B /* DateFormatter+Extensions.swift */; };
 		F7D1483F202349E0003A4F63 /* NavigationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1483E202349E0003A4F63 /* NavigationService.swift */; };
 		F7D1484220234CF9003A4F63 /* CurrentRideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7D1484120234CF9003A4F63 /* CurrentRideViewController.xib */; };
 		F7D1484520234D20003A4F63 /* CurrentRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D1484420234D20003A4F63 /* CurrentRideViewController.swift */; };
@@ -68,7 +71,10 @@
 		F7201A3120244FD3002A13DE /* UIColor+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Theme.swift"; sourceTree = "<group>"; };
 		F7201A3420245EB9002A13DE /* ProfileOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOptionCell.swift; sourceTree = "<group>"; };
 		F7201A3520245EB9002A13DE /* ProfileOptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileOptionCell.xib; sourceTree = "<group>"; };
+		F778164C2029CBE200B01BDA /* NetworkingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingController.swift; sourceTree = "<group>"; };
 		F77DA1C220288730007B5707 /* Ride.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ride.swift; sourceTree = "<group>"; };
+		F78056662029EB090067139B /* NetworkingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingData.swift; sourceTree = "<group>"; };
+		F780566A2029F2E80067139B /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
 		F7D1483E202349E0003A4F63 /* NavigationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationService.swift; sourceTree = "<group>"; };
 		F7D1484120234CF9003A4F63 /* CurrentRideViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentRideViewController.xib; sourceTree = "<group>"; };
 		F7D1484420234D20003A4F63 /* CurrentRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRideViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +171,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		F78056652029EAB10067139B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F778164C2029CBE200B01BDA /* NetworkingController.swift */,
+				F78056662029EB090067139B /* NetworkingData.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		F78056692029F2DA0067139B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F780566A2029F2E80067139B /* DateFormatter+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		F7D1483C202349AA003A4F63 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,6 +266,7 @@
 		F7E7E3AC2023417200BF0D50 /* PickupRide */ = {
 			isa = PBXGroup;
 			children = (
+				F78056692029F2DA0067139B /* Extensions */,
 				F7F8E9D52025B7B20064B2C7 /* Controllers */,
 				F7201A3820246B1E002A13DE /* Store */,
 				F7D1483D202349B8003A4F63 /* UserInterface */,
@@ -264,6 +288,7 @@
 		F7F8E9D52025B7B20064B2C7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F78056652029EAB10067139B /* Networking */,
 				F7F8E9D62025B7BA0064B2C7 /* FileSystem.swift */,
 				F7D270E42028CB6200BC82D4 /* LocationController.swift */,
 			);
@@ -528,6 +553,7 @@
 				F7199F422029BDC0003DE31F /* CurrentRideDataRegistrar.swift in Sources */,
 				F7F8E9E92025BE1B0064B2C7 /* GPSData.swift in Sources */,
 				F7F8E9E62025BE1B0064B2C7 /* Location.swift in Sources */,
+				F778164D2029CBE200B01BDA /* NetworkingController.swift in Sources */,
 				F7D1484A20234F2E003A4F63 /* BundleImage.swift in Sources */,
 				F7D1485520237EB5003A4F63 /* RideActionView.swift in Sources */,
 				F7F8E9E82025BE1B0064B2C7 /* RideAction.swift in Sources */,
@@ -537,7 +563,9 @@
 				F7E7E3AE2023417200BF0D50 /* AppDelegate.swift in Sources */,
 				F7201A3620245EB9002A13DE /* ProfileOptionCell.swift in Sources */,
 				F7F8E9E72025BE1B0064B2C7 /* Booking.swift in Sources */,
+				F78056672029EB090067139B /* NetworkingData.swift in Sources */,
 				F7201A3220244FD3002A13DE /* UIColor+Theme.swift in Sources */,
+				F780566B2029F2E80067139B /* DateFormatter+Extensions.swift in Sources */,
 				F7F8E9EE2025C9A30064B2C7 /* NSManagedObjectContext+Extensions.swift in Sources */,
 				F7D1484F20235282003A4F63 /* NavigationController.swift in Sources */,
 				F7D1483F202349E0003A4F63 /* NavigationService.swift in Sources */,

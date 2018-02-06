@@ -22,6 +22,7 @@ class NavigationService {
     private let bundle = Bundle.main
     private let store: Store
     private let locationController: LocationController
+    private let networkController: NetworkingController
     
     init(window: UIWindow) {
         self.window = window
@@ -35,6 +36,7 @@ class NavigationService {
         
         store = Store(stack: coreDataStack)
         locationController = LocationController(locationManager: CLLocationManager())
+        networkController = NetworkingController(session: URLSession.shared)
         
         locationController.requestPermissionsIfNeeded()
         locationController.startUpdatingLocationIfAllowed()
@@ -42,7 +44,7 @@ class NavigationService {
     
     func displayInitialViewController() {
         let ride = Ride(initialState: .idle)
-        let registrar = CurrentRideDataRegistrar(store: store, locationController: locationController)
+        let registrar = CurrentRideDataRegistrar(store: store, locationController: locationController, networkController: networkController)
         let viewModel = CurrentRideViewModel(ride: ride, dataRegistrar: registrar)
         let viewController = CurrentRideViewController(viewModel: viewModel)
         

@@ -13,15 +13,17 @@ import CoreLocation
 class CurrentRideDataRegistrar {
     
     private let locationController: LocationController
+    private let networkController: NetworkingController
     private let store: Store
     private let disposeBag = DisposeBag()
 
     private var activeBooking: Booking?
     private var registerGPSDataSubscription: Disposable?
     
-    init(store: Store, locationController: LocationController) {
+    init(store: Store, locationController: LocationController, networkController: NetworkingController) {
         self.store = store
         self.locationController = locationController
+        self.networkController = networkController
     }
     
     func registerAction(_ action: RideActionType, bookingInput: BookingInput) {
@@ -42,21 +44,22 @@ class CurrentRideDataRegistrar {
         guard let passengers = Int(bookingInput.passengers) else { return }
         let booking = store.createBooking(addressFrom: bookingInput.addressFrom, addressTo: bookingInput.addressTo,
                                           date: Date(), numberOfPassengers: passengers)
+        networkController.send(booking: booking)
         activeBooking = booking
     }
     
     private func registerAction(_ action: RideActionType, at location: CLLocation) {
         guard let activeBooking = activeBooking else { return }
         let location = Location(location: location)
-        _ = store.createRideAction(for: activeBooking, location: location, date: Date(), type: action)
-        print("Registered action '\(action)' at: \(location.latitude,location.longitude)")
+        let rideAction = store.createRideAction(for: activeBooking, location: location, date: Date(), type: action)
+        networkController.send(action: rideAction)
     }
 
     private func registerGPSData(at location: CLLocation) {
         guard let activeBooking = activeBooking else { return }
         let location = Location(location: location)
-        _ = store.createGPSData(for: activeBooking, location: location, date: Date())
-        print("Registered GPSData at: \(location.latitude,location.longitude)")
+        let gpsData = store.createGPSData(for: activeBooking, location: location, date: Date())
+        networkController.send(gpsData: gpsData)
     }
 
     private func startRegisteringGPSData() {

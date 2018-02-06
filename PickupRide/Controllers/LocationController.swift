@@ -29,7 +29,7 @@ class LocationController: NSObject {
         super.init()
         
         locationManager.delegate = delegate
-        locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
     func startUpdatingLocationIfAllowed() {
