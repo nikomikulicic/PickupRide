@@ -16,7 +16,7 @@ class PreviousRideCell: UITableViewCell {
     @IBOutlet private weak var dateLabel: UILabel!
 
     func setUp(for booking: Booking) {
-        addressFromLabel.text = "\(booking.addressFrom) —"
+        addressFromLabel.text = "\(booking.addressFrom)"
         addressToLabel.text = "\(booking.addressTo)"
         passengersLabel.text = String(booking.numberOfPassengers)
         dateLabel.text = DateFormatter.dateTimeFormatter.string(from: booking.date)
