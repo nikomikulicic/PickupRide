@@ -23,6 +23,10 @@ class LocationController: NSObject {
     var location: CLLocation? {
         return locationManager.location
     }
+    
+    var locationUpdated: Observable<Void> {
+        return delegate.locationUpdated.asObservable()
+    }
 
     init(locationManager: CLLocationManager) {
         self.locationManager = locationManager
@@ -30,6 +34,7 @@ class LocationController: NSObject {
         
         locationManager.delegate = delegate
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.allowsBackgroundLocationUpdates = true
     }
     
     func startUpdatingLocationIfAllowed() {
@@ -47,6 +52,8 @@ class LocationController: NSObject {
 
 class LocationManagerDelegate: NSObject, CLLocationManagerDelegate {
     
+    let locationUpdated = PublishSubject<Void>()
+
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
         case .authorizedAlways:
@@ -54,5 +61,9 @@ class LocationManagerDelegate: NSObject, CLLocationManagerDelegate {
         default:
             manager.stopUpdatingLocation()
         }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        locationUpdated.onNext(())
     }
 }

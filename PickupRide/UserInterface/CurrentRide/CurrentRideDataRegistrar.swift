@@ -70,12 +70,10 @@ class CurrentRideDataRegistrar {
     }
 
     private func startRegisteringGPSData() {
-        let locationUpdateInterval = 5.0
-        registerGPSDataSubscription = Observable<Int>
-            .interval(locationUpdateInterval, scheduler: MainScheduler.instance)
-            .map { _ in () }
-            .startWith(())
-            .subscribe(onNext: { [weak self] in
+        let gpsUpdateInterval = 5.0
+        registerGPSDataSubscription = locationController.locationUpdated
+            .throttle(gpsUpdateInterval, scheduler: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] location in
                 guard let location =  self?.locationController.location else { return }
                 self?.registerGPSData(at: location)
             })
